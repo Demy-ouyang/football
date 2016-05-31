@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body, .wrap-page {
+    height: 100%;
+}
+body {
+    max-width: 940px;
+    margin: 0 auto;
+    font-family:"Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    background: #222;
+}
+html { font-size: 62.5%; }
+body { font-size: 14px; font-size: 1.4rem; }
+/**/
+
+.wrap-page{
+    -webkit-overflow-scrolling: touch; background: url("../images/wrap_bg.png") no-repeat center center;
+}
+/*第二层数据背景*/
+.bg-box{
+    position: absolute;width:100%;height:100%;
+}
+.bg-box>div{
+    position: absolute;top:0;bottom:0;opacity: .75;filter:alpha(opacity=75);z-index:1;
+}
+.bg-box1{
+    left:0; background: #fa2828;
+}
+.bg-box2{
+    background: #075907;
+}
+.bg-box3{
+    right:0; background: #193278;
+}
+/**/
+.page-box{
+    position: absolute;width:100%;height:100%;z-index:2;
+}
+.top-line{
+    width:100%;height:.3rem;background: #fff;position: absolute;top:3.4rem;
+}
+.center-line{
+    height:60%;width:.3rem; background: #fff;opacity: .75;filter:alpha(opacity=75); position: absolute;left:50%;margin-left:-.15rem;top:3.7rem;
+}
+/**/
+.page-h1{
+    margin-top:6rem;
+}
+.page-team{
+position: relative;margin-top:4rem;
+}
+.team-con{
+    position: absolute;width:35%; text-align: center;
+}
+.team-con h3{
+    display: block;/*font-size: 24px;*/font-size: 2.4rem;  color: #fff;text-align: center;margin-bottom: 2.4rem;
+}
+.team-con .team-logo{
+    width:80%;margin:0 10%;height:0;padding-bottom:112%;background: red;display:table-cell;
+    text-align:center;
+    vertical-align:middle;
+}
+.team-con img{
+   width:80%;
+}
+.team-left{
+    left:0;
+}
+.team-right{
+    right:0;
+}

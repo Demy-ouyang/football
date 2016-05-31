@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+body {
+    /*max-width: 940px;*/
+    margin: 0 auto;
+    font-family: "Microsoft Yahei","Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    background: #fff;
+    color: #000;
+}
+html { font-size: 62.5%;/* 10÷16=62.5% */ }
+body { font-size: 14px; font-size: 1.4rem; }
+.f_left{float: left;}
+.f_right {float: right;}
+.f_blue{color: #18538d;}
+.f_red{color: #e54b4d;}
+.f_green{color: #2bac38;}
+.bg_red{background: #e54b4d;  }
+.bg_green{background: #2bac38;  }
+.bg_blue{background: #18538d;  }
+
+/**/
+.header,.wrap-page{
+    position: absolute;left:0;right:0;
+}
+.header{
+    height:6rem; line-height:6rem; background: #2bac38;top:0;
+}
+.header h1{
+    display: block;font-size: 3.6rem;text-align: center; color: #fff;
+}
+/*header end*/
+.wrap-page{
+    -webkit-overflow-scrolling: touch;background: #fff;position: absolute;top:6rem;bottom:0;
+}
+.page-top{
+   width:50rem; margin:2rem auto;overflow: hidden; position: relative;/*padding-bottom:1rem;*/
+}
+/*team*/
+.team-con{
+    width:30%;
+}
+.team-con .team-logo{
+    width:80%;margin:0 auto; text-align: center;
+}
+.team-con .team-logo img{
+    width:100%;
+}
+.team-con .team-name{
+    display: block;;text-align: center;font-size: 2.4rem;margin-top:.7rem;border-bottom:.1rem solid #000;padding-bottom:1rem;
+}
+/**/
+.team-pk-score{
+    height:7.2rem; text-align: center;
+}
+.team-con .team-pk-score{
+    line-height:7.2rem ;font-size: 5.8rem;    padding-top: 1rem;
+}
+    /*team middle*/
+.team-detail {
+    position: absolute;width:40%;left:30%;height:100%;padding-top:6rem;
+}
+.team-detail-p1,.team-detail .team-detail-p2{
+    font-size: 2.2rem; text-align: center;
+}
+.team-detail-p3,.team-detail .team-detail-num{
+    font-size: 2rem; text-align: center;
+}
+.team-detail-num{
+   width:100%; color:#222;position: absolute; bottom:7.2rem;border-bottom:.1rem solid #000;padding-bottom:1rem;
+}
+.team-detail .team-pk-score{
+    position: absolute;bottom:0;font-size: 4rem;width:100%;line-height: 2;
+}
+    /*第二层数据背景*/
+.page-middle{
+    width:100%;height:19.5rem;position: relative;
+}
+.bg-box{
+    position: absolute;width:100%;height: 100%;z-index:1;
+}
+.bg-box>div{
+    position: absolute;top:0;bottom:0;z-index:1;
+}
+.bg-box1{
+    left:0;
+}
+.bg-box3{
+    right:0;
+}
+  /*第三层白线背景*/
+.bg-line{
+    position: absolute;width:100%;height: 100%;z-index:2;overflow: hidden;
+}
+.bg-line1{
+    border:.3rem solid #fff;width:3.5rem;height:12.6rem;margin-top:3.2rem;
+}
+.bg-line1.f_left{
+    margin-left:-.3rem;
+}
+.bg-line1.f_right{
+    margin-right:-.3rem;
+}
+.bg-line2{
+    width:.3rem;height:100%;position: absolute;left:50%;margin-left:-.15rem;background: #fff;z-index:2;
+}
+.bg-line3{
+    height:12.6rem;width:12.6rem;border:.3rem solid #fff;margin-top:3.2rem;position: absolute;border-radius:50%;left:50%;margin-left:-6.3rem;
+}
+/**/
+.page-button{
+    width:51rem;margin:0 auto; overflow: hidden;padding-top:3rem;padding-bottom:3rem;
+}
+.page-button .btn-box{
+    float: left; height: 5.4rem;
+}
+.btn-box .btn{
+   display: inline-block; height:5.4rem; line-height: 5.4rem; color: #fff; font-size: 4rem;width:14rem; text-align: center;
+}
+.btn-box.btn-left{
+    border-right:1rem solid #e54b4d;padding-right:1rem;
+}
+.btn-box.btn-middle{
+    padding:0 1rem;border-left:1rem solid #e54b4d;border-right:1rem solid #18538d;margin:0 1rem;
+}
+.btn-box.btn-middle .btn{width:13rem;}
+.btn-box.btn-right{
+    border-left:1rem solid #18538d;padding-left:1rem;
+}
+/*活动规则*/
+.page-action{
+    text-align: center;  font-size: 1.5rem;
+}
+.page-action h3{
+    display: block; text-decoration: underline; margin-bottom: 1rem;
+}
+.page-action p{
+    margin-top:1rem;
+}
+.foot-logo{
+    width:14rem;margin:0 auto;padding-top:2rem;
+}
+.foot-logo img{
+    width:100%;
+}
+
+
