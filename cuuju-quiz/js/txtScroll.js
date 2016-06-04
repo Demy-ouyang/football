@@ -12,7 +12,7 @@ function scrollup(o,d,c){
     }else{
         c+=2;
         getFirstChild(o.firstChild).style.marginTop=-c+"px";
-        window.setTimeout(function(){scrollup(o,d,c)},20);
+        window.setTimeout(function(){scrollup(o,d,c)},10);
     }
 }
 //解决firefox下会将空格回车作为节点的问题
