@@ -1,0 +1,123 @@
+body{
+	width:100%;
+	overflow:hidden;
+}
+html{-webkit-text-size-adjust:none;}
+
+.hide{ display:none;}
+.page{
+	width:100%;
+	height:100%;
+	position:absolute;
+	font-size:100px;
+	text-align:center;
+}
+.page .wrap{
+	height:500px;
+}
+.page-1-1 { background-image: url("../images/p1_bg.png"); background-size: cover;}
+.page-2-1 {background: url("../images/p2_bg.png");background-size: cover;}
+.page-3-1 { background: url("../images/p2_bg.png");background-size: cover;}
+/*!*.page-2-2{ background-color:#fd705d;}*!*/
+/*.page-4-1 { background-color:#fff;}*/
+/*!*.page-3-2{ background-color:#F3533C;}*!*/
+/*.page-5-1 { background-color:#fff;}*/
+/*!*.page-4-2{ background-color:#FFBF50;}*!*/
+
+
+.page-current{
+	z-index:1;
+}
+.pageposition {position: absolute; top: 56%; left: 50%; max-width: 1080px;width:90%;left:5%;}
+.page-1-1 .pageposition{ top: 19%;}
+.page-1-1 .img_1 {
+    height:auto;
+    position:absolute;
+    width: 60%;
+    right:7%;
+    top:10px;
+
+}
+.page-1-1 .img_2 {
+    height:auto;
+    position:absolute;
+    width:60%;
+    left: 10%;
+    margin-top: 59%;
+
+}
+.page-1-1 .img_4 {
+    height:auto;
+    position:absolute;
+    top:83%;
+    width:50%;
+    left:25%;
+}
+
+.page-2-1 .pageposition{ top:6%;}
+.page-2-1 .img_1 {
+	height:auto;
+    width:100%;
+	position:absolute;
+	left:0;
+	margin-top:10%;
+}
+.page-2-1 .img_2 {
+	height:auto;
+    width:100%;
+	position:absolute;
+	left:0;
+	top:45%;
+    margin-top:65%;
+}
+
+.page-2-1 .img_4 {
+    height:auto;width:280px;
+    position:absolute;
+    left:50%;
+    top:77%;
+    margin-left:-140px;
+}
+.page-3-1 .p3_box{
+    width:90%;
+    background: rgba(255,255,255,.2);
+    position: absolute;
+    left:5%;
+    top:11%;
+    bottom:9%;
+}
+.p3_txt{margin-top:20px;padding:0 20px;}
+.p3_txt p{display: block;line-height: 1;  color: #fff;font-size:14px; text-align: left;}
+
+.page-1-1 .img_8,.page-2-1 .img_8,.page-3-1 .img_8{
+    height: auto;
+    width: 25px;
+    position: absolute;
+    left: 50%;
+    top: 93%;
+    margin-left: -12px;
+}
+.page-1-1 .img_8{
+     top: 93%;
+ }
+.p_h2{
+    display: block;
+    font-weight:normal;
+    font-size:18px;
+    color: #fff;
+    margin-top:5%;
+}
+
+/*@media screen and (max-width: 320px) {*/
+    /*.page-2-1 .pageposition {*/
+        /*top: 10%;*/
+    /*}*/
+/*}*/
+
+@media screen and (min-width: 640px) {
+    .page-2-1 .pageposition{ top:6%;width:80%;left:10%;}
+    .page-2-1 .img_2{margin-top:60%;}
+    .page-3-1 .p3_box{top:15%;}
+    .p3_txt{margin-top:40px;}
+    .p3_txt p{line-height: 1.4;font-size:16px; }
+}
