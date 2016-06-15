@@ -55,8 +55,18 @@ body { font-size: 14px; font-size: 1.4rem; }
     width:100%;
 }
 .team-con .team-name{
-    display: block;;text-align: center;font-size: 2.4rem;margin-top:.7rem;border-bottom:.1rem solid #000;padding-bottom:1rem;
+    display: block;;text-align: center;font-size: 2.4rem;margin-top:.7rem;border-bottom:.1rem solid #000;padding-bottom:1rem;position: relative;
 }
+.team-con .team-name:before{
+     display: inline-block;content: '';width:10rem;height:1rem;position: absolute;bottom:-.1rem;left:50%;margin-left:-5rem;
+}
+.f_left .team-name:before{
+    background: #e54b4d;
+}
+.f_right .team-name:before{
+    background: #18538d;
+}
+
 /**/
 .team-pk-score{
     height:7.2rem; text-align: center;
