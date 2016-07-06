@@ -16,7 +16,7 @@ $(document).swipeUp(function(){
 	if (isAnimating) return;
 	last.row = now.row;
 	last.col = now.col;
-	if (last.row != 3) { now.row = last.row+1; now.col = 1; pageMove(towards.up);}
+	if (last.row != 4) { now.row = last.row+1; now.col = 1; pageMove(towards.up);}
 })
 
 $(document).swipeDown(function(){

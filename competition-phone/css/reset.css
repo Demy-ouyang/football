@@ -9,12 +9,15 @@
 }
 body {
   width: 100%;
-  font-family: Hiragino Sans GB, Arial, Helvetica, "ºÚÌå", sans-serif;
+  font-family: Hiragino Sans GB, Arial, Helvetica, "ï¿½ï¿½ï¿½ï¿½", sans-serif;
   font-size: 14px;
   color: #878787;
   -webkit-touch-callout: inherit ;
   -webkit-user-select: auto ;
   background-color: #fff;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 a {
   color: #878787;

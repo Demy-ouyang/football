@@ -260,7 +260,8 @@ Wilq32.PhotoEffect.prototype={
 		else if (supportedCSS)
 		return function(angle){
             this._angle = angle;
-			this._img.style[supportedCSS]="rotate("+(angle%360)+"deg)";
+			//this._img.style[supportedCSS]="rotate("+(angle%360)+"deg)";
+			this._img.style[supportedCSS]="rotate("+(angle%360)+"deg) translateZ(1px)";
 		}
 		else 
 		return function(angle)

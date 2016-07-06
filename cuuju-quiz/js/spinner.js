@@ -15,7 +15,7 @@ var turnplate={
 $(document).ready(function(){
     //动态添加大转盘的奖品与奖品区域背景颜色
     turnplate.restaraunts = ["布朗熊", "马克杯", "谢谢参与", "足球耳机", "手环耳机", "小米耳机", "iphone6s", "特色电商礼品", "乐视电视", "暴风魔镜"];
-    turnplate.colors = ["#FFF4D6", "#FFFFFF", "#FFF4D6", "#FFFFFF","#FFF4D6", "#FFFFFF", "#FFF4D6", "#FFFFFF","#FFF4D6", "#FFFFFF"];
+    turnplate.colors = ["transparent", "transparent", "transparent", "transparent","transparent", "transparent", "transparent", "transparent","transparent", "transparent"];
 
 
     var rotateTimeOut = function (){
@@ -107,7 +107,7 @@ function drawRouletteWheel() {
         //在给定矩形内清空一个矩形
         ctx.clearRect(0,0,422,422);
         //strokeStyle 属性设置或返回用于笔触的颜色、渐变或模式
-        ctx.strokeStyle = "#FFBE04";
+        ctx.strokeStyle = "transparent";
         //font 属性设置或返回画布上文本内容的当前字体属性
         ctx.font = '14px Microsoft YaHei';
         for(var i = 0; i < turnplate.restaraunts.length; i++) {
