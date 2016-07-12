@@ -1,0 +1,199 @@
+@charset "utf-8";
+@import "_mixin";
+@import "_variable";
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjzdust: 100%;
+  height:100%;
+}
+
+body {
+  line-height: 1.6;
+  font-family: @sansFont;
+  height:100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  border: 0;
+}
+
+a {
+  text-decoration: none;color: @default-color;
+}
+ul,li{
+  list-style:none;
+}
+
+@font-face {
+  font-family: 'bdzongyi-a00fzzongyim05sarial';
+  src: url('../font/baidu_zongyi_0-webfont.woff2') format('woff2'),
+  url('../font/baidu_zongyi_0-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+
+}
+.team-logo{
+  border:1px solid @img-border-color; .px2rem(border-width,1);background: @img-box-bg;display: block;
+  margin:0 auto;.border-radius();
+  img{
+    .border-radius();width:100%;height:100%;
+  }
+}
+.clearfix{
+  zoom:1;
+   &:after{
+     content:".";display:block;height:0;clear:both;visibility:hidden
+  }
+}
+/**/
+
+.wrap{
+  width:100%;background: url("../images/body_bg.png") repeat-y;
+}
+.header{
+  .px2rem(width,750);.px2rem(height,698); background: @topBg no-repeat; background-size: cover;
+  .px2rem(padding-top,224);
+  .top-team{
+    .px2rem(width,188);.px2rem(height,188);position: relative;.team-logo();
+
+    &:after{
+      display: block;content: '';.px2rem(width,186);.px2rem(height,29);.border-radius();background: url("../images/team_top_shadow.png") top center no-repeat; background-size: cover;position: absolute;.px2rem(bottom,-29);
+    }
+  }
+  .top-h2{
+    display: block;color: @default-color;.px2px(font-size,42);.px2rem(padding-top,70); text-align: center;
+    font-family: 'bdzongyi-a00fzzongyim05sarial';width:12em;margin:0 auto; line-height: 1;
+  }
+  .team-statu{
+    .px2rem(width,540);margin:0 auto;.px2rem(padding,50);.px2px(font-size,32);color:@secColor;
+    span{
+      display: block;width:50%;.px2rem(line-height,34);
+      i{
+        display: inline-block;font-style: normal;.px2rem(margin-right,15);vertical-align: sub;
+      }
+    }
+    .team-follow{
+      float: left;text-align: left;
+    }
+    .team-num{
+      float: right;text-align: right;
+    }
+    .divide{
+      display: inline-block;font-style:normal;float: right;
+    }
+    .icon-follow{
+      .px2rem(width,36); .px2rem(height,30);background: url("../images/follow_dot.png") center center no-repeat;background-size: cover;
+    }
+    .icon-team{
+      .px2rem(width,34);.px2rem(height,33);background-size: cover;
+    }
+  }
+}
+
+.main-content{
+  border:4px solid rgba(255,255,255,.75);.px2px(border-width,4);border-top:none;
+}
+.part{
+  .px2rem(margin-bottom,70);
+  h3{
+    display: block;font-weight: normal;.px2px(font-size,34);color: @default-color;text-align: center;.px2rem(padding-bottom,38);
+    .h3-bg{
+      display: inline-block;.px2rem(width,338);.px2rem(height,58);.px2rem(line-height,58);text-align: center;background: url("../images/h3_bg.png") no-repeat;background-size: cover;
+    }
+  }
+  p{
+    display: block;font-weight: normal;.px2px(font-size,28);color: @default-color;text-indent: 2em;.px2rem(padding,38)
+; padding-top:0;line-height: 42/28;}
+  h4{
+    display: block;;text-align: center;.px2px(font-size,32);line-height: 42/32;color:@thicolor;.px2rem(padding-top,30);
+  }
+}
+.team-result{
+  .px2rem(padding,30);padding-bottom:0;
+  span{
+    display: inline-block;color:@default-color;.px2px(font-size,32);
+  }
+  .team-txt{
+    .px2rem(width,252);.px2rem(padding-top,50);
+  }
+  .team-name{
+    text-align: right;float: left;.team-txt();
+  }
+  .team-sort-box{
+    .px2rem(width,134);float: left;.px2rem(margin-left,25);position: relative;.px2rem(padding-bottom,95);
+    .team-logo1{
+      .team-logo();.px2rem(width,132);.px2rem(height,132);
+    }
+    .team-sort{
+     display: block; background: url("../images/medal.png") no-repeat;.px2rem(width,59);.px2rem(height,95);margin:0 auto;position: absolute;.px2rem(top,134);.px2rem(margin-left,39);text-align: center;vertical-align: bottom;line-height: 4;
+    }
+  }
+  .team-money{
+    .team-txt();text-align: left;float:right;
+  }
+}
+.team-list{
+  display: block;.clearfix();
+  li{
+    float: left;.px2rem(width,170);text-align: center;
+    .team-logo2{
+      display:block;.team-logo();.px2rem(width,98);.px2rem(height,98);margin:0 auto;
+
+    }
+    .team-name{
+      display: block;.px2px(font-size,26);color:@default-color;line-height: 72/26;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
