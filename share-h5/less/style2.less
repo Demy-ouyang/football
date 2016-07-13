@@ -27,10 +27,10 @@ img {
 a {
   text-decoration: none;color: @default-color;
 }
-ul{list-style-type:none}
-li{
-  list-style-type: none;
+ul,li{
+  list-style:none;
 }
+
 @font-face {
   font-family: 'bdzongyi-a00fzzongyim05sarial';
   src: url('../font/baidu_zongyi_0-webfont.woff2') format('woff2'),
@@ -52,18 +52,26 @@ li{
 .clearfix{
   zoom:1;
    &:after{
-     content:"";display:block;height:0;clear:both;
+     content:".";display:block;height:0;clear:both;visibility:hidden
   }
 }
-
+.stripe-bg{
+  background: linear-gradient(to right,#000 50%,#fff 50%);background-size: 96px 100%;opacity: .05;
+}
 /**/
 
 .wrap{
   width:100%;background: @bodyBg repeat top center;
 }
 .header{
- .px2rem(height,445); background: @topBg no-repeat; background-size: cover;
+  .px2rem(width,750);.px2rem(height,445); background: @topBg no-repeat; background-size: cover;position: relative;
   .px2rem(padding-top,224);
+  .header-bg{
+    //transform: prespective(800px)
+  }
+  .stripe-bg{
+    position: absolute;bottom:0;left:0;right:0;height:72px;
+  }
 }
 .top-team{
   .px2rem(width,188);.px2rem(height,188);position: relative;.team-logo();
@@ -74,10 +82,10 @@ li{
 }
 .top-h2{
   display: block;color: @default-color;.px2px(font-size,42);.px2rem(padding-top,70); text-align: center;
-  /*font-family: 'bdzongyi-a00fzzongyim05sarial';*/width:12em;margin:0 auto; line-height: 1;
+  font-family: 'bdzongyi-a00fzzongyim05sarial';width:12em;margin:0 auto; line-height: 1;
 }
 .team-statu{
-  .px2rem(width,690);margin:0 auto;.px2rem(padding,50);.px2px(font-size,32);color:@secColor;position: relative;.px2rem(margin-bottom,50);
+  .px2rem(width,690);margin:0 auto;.px2rem(padding,50);.px2px(font-size,32);color:@secColor;position: relative;
   span{
     display: inline-block;width:50%;.px2rem(line-height,34); text-align: center;
     i{
@@ -103,12 +111,14 @@ li{
 
 
 .main-content{
-  border:4px solid rgba(255,255,255,1);border-top:none;.px2rem(padding-left,30);.px2rem(padding-right,30); box-shadow: inset 0 200px 200px rgba(0,0,0,.2);
+  border:4px solid rgba(255,255,255,.75);.px2px(border-width,4);border-top:none;.px2rem(padding-left,30);.px2rem(padding-right,30); position: relative;
 
   .main-bottom{
     .px2rem(width,235);.px2rem(height,119);background: url("../images/bottom-bg.png") no-repeat center bottom;display: block;margin:0 auto;
   }
-
+  .stripe-bg{
+    position: absolute;z-index:2;top:0;left:0;bottom:0;right:0;
+  }
 }
 .part{
   .px2rem(margin-bottom,70);
@@ -187,7 +197,7 @@ li{
 }
 /*球员列表*/
 .per-list{
-  .clearfix();/*.px2rem(margin-left,-20);*/
+  .clearfix();.px2rem(margin-left,-20);
   li{
     float: left;.px2rem(width,147);.px2rem(height,147);.border-radius(5px);.px2rem(margin-left,20);.px2rem(margin-bottom,25);
     img{
