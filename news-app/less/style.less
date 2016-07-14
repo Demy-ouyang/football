@@ -1,6 +1,13 @@
 @charset "utf-8";
 @import "_variable";
 @import "_mixin";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjzdust: 100%;
@@ -11,12 +18,7 @@ body {
   line-height: 1.6;
   font-family: @sansFont;
   height:100%;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  background-color: #fff;
 }
 
 img {
@@ -27,6 +29,12 @@ a {
   text-decoration: none;color: @DefaultColor;
 }
 //base
+//html { font-size: 62.5%;/* 10÷16=62.5% */ }
+//body { font-size: 14px; font-size: 1.4rem; }
+
+//.px2px(@name, @px){
+//    @{name}: @px/10*1rem;
+//}
 .font-error{
   color: @errorColor;
 }
@@ -50,8 +58,7 @@ a {
 .cuuju-media-box{
   .center(30);
   .px2px(padding-bottom,20);
-  border-bottom:solid @top-border-color;
-  .px2px(border-bottom-width,1px);
+  border-bottom:1px solid @top-border-color;
   position: relative;
   //-webkit-tap-highlight-color: rgba(0, 0, 0, 0);/*取消手机表单元素点击出现的边框*/
 
@@ -83,17 +90,19 @@ a {
     }
 
     .cuuju-media-bd{
-      .px2px(margin-top,30);
+      .px2px(margin-top,14);
+      line-height: 1;
       .flex-width(1);
       min-width: 0;
 
       .cuuju-media-title{
-        .px2px(font-size,36);
+       font-size:18px;
         font-weight:400;
         width:auto;
         //.word-wrap()
       }
       .cuuju-media-time{
+        .px2px(margin-top,14);
         .px2px(font-size,24);
         color: @secColor;
       }
@@ -104,8 +113,8 @@ a {
 .cuuju-panel{
   .cuuju-detail{
     .center(30);
-    .px2px(margin-top,45);
-    .px2px(margin-bottom,40);
+    .px2px(margin-top,30);
+    .px2px(margin-bottom,30);
 
     .cuuju-tips{
       .px2px(font-size,28);
@@ -114,8 +123,7 @@ a {
 
     .cuuju-tips-warn{
       .px2px(margin-top,28);
-      .px2px(border-width,1);
-      border: solid @top-border-color2;
+      border:1px solid @top-border-color2;
       position: relative;
       .px2px(min-height,150);
       &:before{
@@ -124,12 +132,12 @@ a {
         width:0;
         height:0;
         border-style:solid;
-        .px2px(border-width,12);
+        border-width:6px;
         border-top:0;
         border-color:transparent transparent @top-border-color2 transparent;
         position: absolute;
-        .px2px(top,-12);
-        .px2px(left,22);
+        top:-6px;
+        left:11px;
 
       }
       &:after{
@@ -143,8 +151,8 @@ a {
         border-top:0;
         border-color:transparent transparent @white transparent;
         position: absolute;
-        .px2px(top,-11);
-        .px2px(left,23);
+        top:-5px;
+        left:11px;
       }
       .warn-con{
         color: @secColor;
@@ -160,51 +168,55 @@ a {
 .cuuju-competition{
   .center(30);
   .border-radius(10px);
-  .px2px(padding-left,42);
+  .px2px(padding-left,40);
   .px2px(padding-top,40);
   overflow: hidden;
   position: relative;
   background: @huibg;
+  min-height:140px;
   .compt-line{
     .px2px(font-size,28);
-    .px2px(padding-bottom,40);
+    .px2px(padding-bottom,30);
     overflow: hidden;
     position: relative;
     .compt-line-label{
       display: inline-block;
-      width:5em;
+      width:70px;
       color: @compt-color;
-      text-align: justify;
-      text-align-last: justify;
       float: left;
-      .px2px(margin-right,36)
+      .px2px(margin-right,20);
+      .just-txt{
+        vertical-align: top;
+        width:100%;
+        display: inline-block;
+        font-style: normal;
+      }
     }
     .compt-line-deta{
       color: @compt-color2;
+      .flex-box();
+      .flex-align(center);
     }
 
   }
 
   .compt-tag{
-    .px2px(width,348);
-    .px2px(height,48);
-    .px2px(font-size,30);
-    text-align: center;
-    color: @white;
-    transform: rotate(45deg);
+    .px2px(width,128);
+    .px2px(height,140);
     position: absolute;
-    .px2px(right,-118);
-    .px2px(top,30);
-    font-weight: bold;
+    top:0;
+    right:0;
     z-index:2;
-
-
+    text-indent: -9999px;
     &.warn-bg{
-      background: @warn-bg;
+      background: url("../images/com_tag1.png") no-repeat;
+      background-size: cover;
     }
     &.error-bg{
-      background: @error-bg;
+      background: url("../images/com_tag2.png") no-repeat;
+      background-size: cover;
     }
+
   }
 
 }
