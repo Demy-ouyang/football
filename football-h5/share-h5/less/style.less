@@ -5,6 +5,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjzdust: 100%;
   height:100%;
+  font-size: 62.5%;/* 10÷16=62.5% */
 }
 
 body {
@@ -13,7 +14,9 @@ body {
   height:100%;
   color:@default-color;
 }
-
+html, body {
+  font-size: 100%
+}
 * {
   margin: 0;
   padding: 0;
@@ -62,7 +65,7 @@ li{
   width:100%;background: @bodyBg repeat top center;
 }
 .header{
- .px2rem(height,445); background: @topBg no-repeat; background-size: cover;
+ width:100%;.px2rem(height,445); background: @topBg no-repeat; background-size: cover;
   .px2rem(padding-top,224);
 }
 .top-team{
@@ -74,7 +77,7 @@ li{
 }
 .top-h2{
   display: block;color: @default-color;.px2px(font-size,42);.px2rem(padding-top,70); text-align: center;
-  /*font-family: 'bdzongyi-a00fzzongyim05sarial';*/width:12em;margin:0 auto; line-height: 1;
+  font-family: 'bdzongyi-a00fzzongyim05sarial';width:12em;margin:0 auto; line-height: 1.2;
 }
 .team-statu{
   .px2rem(width,690);margin:0 auto;.px2rem(padding,50);.px2px(font-size,32);color:@secColor;position: relative;.px2rem(margin-bottom,50);
@@ -103,10 +106,10 @@ li{
 
 
 .main-content{
-  border:4px solid rgba(255,255,255,1);border-top:none;.px2rem(padding-left,30);.px2rem(padding-right,30); box-shadow: inset 0 200px 200px rgba(0,0,0,.2);
+  border:4px solid #fff;border-top:none;.px2rem(border-width,4);.px2rem(padding-left,30);.px2rem(padding-right,30); box-shadow: inset 0 200px 200px rgba(0,0,0,.2);
 
   .main-bottom{
-    .px2rem(width,235);.px2rem(height,119);background: url("../images/bottom-bg.png") no-repeat center bottom;display: block;margin:0 auto;
+    .px2rem(width,235);.px2rem(height,119);background: url("../images/bottom-bg.png") no-repeat center bottom;display: block;margin:0 auto;background-size: cover;
   }
 
 }
@@ -145,7 +148,7 @@ li{
       .team-logo();.px2rem(width,132);.px2rem(height,132);
     }
     .team-sort{
-     display: block; background: url("../images/medal.png") no-repeat;.px2rem(width,59);.px2rem(height,95);margin:0 auto;position: absolute;.px2rem(top,134);.px2rem(margin-left,39);text-align: center;vertical-align: bottom;line-height: 4;
+     display: block; background: url("../images/medal.png") no-repeat;.px2rem(width,59);.px2rem(height,95);margin:0 auto;position: absolute;.px2rem(top,132);.px2rem(margin-left,39);text-align: center;vertical-align: bottom;line-height: 4; background-size: cover;
     }
   }
   .team-money{
@@ -158,8 +161,10 @@ li{
   li{
     float: left;.px2rem(width,170);text-align: center;.px2rem(margin-bottom,20);
     .team-logo2{
-      display:block;.team-logo();.px2rem(width,98);.px2rem(height,98);margin:0 auto;
-
+      display:block;.team-logo();.px2rem(width,98);.px2rem(height,98);margin:0 auto;.border-radius(5px);
+      img{
+        .border-radius(5px);
+      }
     }
     .team-name{
       display: block;.px2px(font-size,26);color:@default-color;line-height: 72/26;
@@ -170,7 +175,7 @@ li{
 .article-top{
   .clearfix();.px2rem(padding-left,25);
   .per-img{
-    display: block;.px2rem(width,96);.px2rem(width,96);.border-radius(50%);
+    display: block;.px2rem(width,96);.px2rem(height,96);.border-radius(50%);
     img{
       width:100%;height:100%;
     }
@@ -190,6 +195,9 @@ li{
   .clearfix();/*.px2rem(margin-left,-20);*/
   li{
     float: left;.px2rem(width,147);.px2rem(height,147);.border-radius(5px);.px2rem(margin-left,20);.px2rem(margin-bottom,25);
+    &:nth-child(4n+1){
+      margin-left:0;
+    }
     img{
       wdith:100%;height:100%;
     }
@@ -215,6 +223,9 @@ li{
     float: left;.px2rem(margin-left,95);.px2rem(width,152);
     .code-img{
       display:block;.px2rem(width,152);.px2rem(height,152);
+      img{
+        max-width:100%;
+      }
     }
     .code-name{
       display: block;.px2px(font-size,28);line-height: 40/28; text-align: center;padding-top:10px;
@@ -222,7 +233,10 @@ li{
   }
 }
 .main-btn{
-  display: block;.px2rem(width,610);.px2rem(height,73);.px2rem(line-height,73);margin:0 auto;.border-radius();.px2rem(margin-bottom,60);background: @main-btn-bg;.px2px(font-size,30);text-align: center;color:@main-btn-color;box-shadow: 0 9px 0 @main-btn-border-bg;
+  display: block;.px2rem(width,610);.px2rem(height,82);.px2rem(line-height,73);margin:0 auto;.border-radius(5px);.px2rem(margin-bottom,60);background: @main-btn-bg;.px2px(font-size,30);text-align: center;color:@main-btn-color;position: relative;z-index:2;
+  &:before{
+    display: inline-block;width:100%;content: '';.px2rem(height,9);background: @main-btn-border-bg;position: absolute;.px2rem(top,73);left:0;.border-radius(0 0 5px 5px);z-index:0;
+  }
 }
 /*比赛信息*/
 .team-vs{

@@ -22,11 +22,9 @@ a {
   text-decoration: none;
   color: #ffffff;
 }
-ul {
-  list-style-type: none;
-}
+ul,
 li {
-  list-style-type: none;
+  list-style: none;
 }
 @font-face {
   font-family: 'bdzongyi-a00fzzongyim05sarial';
@@ -66,10 +64,16 @@ li {
   zoom: 1;
 }
 .clearfix:after {
-  content: "";
+  content: ".";
   display: block;
   height: 0;
   clear: both;
+  visibility: hidden;
+}
+.stripe-bg {
+  background: linear-gradient(to right, #000000 50%, #ffffff 50%);
+  background-size: 96px 100%;
+  opacity: .05;
 }
 /**/
 .wrap {
@@ -77,10 +81,19 @@ li {
   background: url(../images/body_bg2.png) repeat top center;
 }
 .header {
+  width: 10rem;
   height: 5.93333333rem;
   background: url(../images/top_bg3.jpg) no-repeat;
   background-size: cover;
+  position: relative;
   padding-top: 2.98666667rem;
+}
+.header .stripe-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
 }
 .top-team {
   width: 2.50666667rem;
@@ -121,7 +134,7 @@ li {
   font-size: 21px;
   padding-top: 0.93333333rem;
   text-align: center;
-  /*font-family: 'bdzongyi-a00fzzongyim05sarial';*/
+  font-family: 'bdzongyi-a00fzzongyim05sarial';
   width: 12em;
   margin: 0 auto;
   line-height: 1;
@@ -148,7 +161,6 @@ li {
   font-size: 16px;
   color: #fcff00;
   position: relative;
-  margin-bottom: 0.66666667rem;
 }
 [data-dpr="2"] .team-statu {
   font-size: 32px;
@@ -206,11 +218,27 @@ li {
   background-size: cover;
 }
 .main-content {
-  border: 4px solid #ffffff;
+  border: 4px solid rgba(255, 255, 255, 0.75);
+  border-width: 2px;
   border-top: none;
   padding-left: 0.4rem;
   padding-right: 0.4rem;
-  box-shadow: inset 0 200px 200px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+[data-dpr="2"] .main-content {
+  border-width: 4px;
+}
+[data-dpr="2.5"] .main-content {
+  border-width: 5px;
+}
+[data-dpr="2.75"] .main-content {
+  border-width: 6px;
+}
+[data-dpr="3"] .main-content {
+  border-width: 6px;
+}
+[data-dpr="4"] .main-content {
+  border-width: 8px;
 }
 .main-content .main-bottom {
   width: 3.13333333rem;
@@ -218,6 +246,14 @@ li {
   background: url("../images/bottom-bg.png") no-repeat center bottom;
   display: block;
   margin: 0 auto;
+}
+.main-content .stripe-bg {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 .part {
   margin-bottom: 0.93333333rem;
@@ -385,10 +421,11 @@ li {
   zoom: 1;
 }
 .team-list:after {
-  content: "";
+  content: ".";
   display: block;
   height: 0;
   clear: both;
+  visibility: hidden;
 }
 .team-list li {
   float: left;
@@ -442,10 +479,11 @@ li {
   padding-left: 0.33333333rem;
 }
 .article-top:after {
-  content: "";
+  content: ".";
   display: block;
   height: 0;
   clear: both;
+  visibility: hidden;
 }
 .article-top .per-img {
   display: block;
@@ -502,21 +540,23 @@ li {
   font-size: 56px;
 }
 .article-top .top-con:after {
-  content: "";
+  content: ".";
   display: block;
   height: 0;
   clear: both;
+  visibility: hidden;
 }
 /*球员列表*/
 .per-list {
   zoom: 1;
-  /*.px2rem(margin-left,-20);*/
+  margin-left: -0.26666667rem;
 }
 .per-list:after {
-  content: "";
+  content: ".";
   display: block;
   height: 0;
   clear: both;
+  visibility: hidden;
 }
 .per-list li {
   float: left;
@@ -537,10 +577,11 @@ li {
   zoom: 1;
 }
 .company-list:after {
-  content: "";
+  content: ".";
   display: block;
   height: 0;
   clear: both;
+  visibility: hidden;
 }
 .company-list li {
   float: left;
@@ -629,10 +670,11 @@ li {
   position: relative;
 }
 .team-vs:after {
-  content: "";
+  content: ".";
   display: block;
   height: 0;
   clear: both;
+  visibility: hidden;
 }
 .team-vs .team-pk {
   width: 100%;
