@@ -81,18 +81,29 @@ li {
 .wrap {
   width: 100%;
   background: url(../images/body_bg2.png) repeat top center;
+  max-width: 750px;
+  margin: 0 auto;
 }
 .header {
+  position: relative;
+}
+.header .ui-placehold-img {
+  position: relative;
+  padding-top: 59.33333333%;
+}
+.header .ui-placehold-img > span {
   width: 100%;
-  height: 5.93333333rem;
-  background: url(../images/top_bg3.jpg) no-repeat;
-  background-size: cover;
-  padding-top: 2.98666667rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
 }
 .top-team {
   width: 2.50666667rem;
   height: 2.50666667rem;
-  position: relative;
   border: 1px solid #dadada;
   border-width: 0.01333333rem;
   background: #ffffff;
@@ -101,6 +112,11 @@ li {
   border-radius: 10px;
   -webkit-border-radiu: 10px;
   -moz-border-radiu: 10px;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  margin-left: -1.25333333rem;
+  bottom: 0.38666667rem;
 }
 .top-team img {
   border-radius: 10px;
@@ -274,24 +290,24 @@ li {
 .part article {
   display: block;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   color: #ffffff;
   margin-bottom: 0.33333333rem;
 }
 [data-dpr="2"] .part article {
-  font-size: 28px;
+  font-size: 32px;
 }
 [data-dpr="2.5"] .part article {
-  font-size: 35px;
+  font-size: 40px;
 }
 [data-dpr="2.75"] .part article {
-  font-size: 39px;
+  font-size: 44px;
 }
 [data-dpr="3"] .part article {
-  font-size: 42px;
+  font-size: 48px;
 }
 [data-dpr="4"] .part article {
-  font-size: 56px;
+  font-size: 64px;
 }
 .part article.main-p {
   text-indent: 2em;
@@ -406,6 +422,8 @@ li {
 }
 .team-person {
   zoom: 1;
+  width: 9.2rem;
+  margin: 0 auto;
 }
 .team-person:after {
   content: "";

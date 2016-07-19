@@ -81,18 +81,29 @@ li {
 .wrap {
   width: 100%;
   background: url(../images/body_bg2.png) repeat top center;
+  max-width: 750px;
+  margin: 0 auto;
 }
 .header {
+  position: relative;
+}
+.header .ui-placehold-img {
+  position: relative;
+  padding-top: 59.33333333%;
+}
+.header .ui-placehold-img > span {
   width: 100%;
-  height: 5.93333333rem;
-  background: url(../images/top_bg3.jpg) no-repeat;
-  background-size: cover;
-  padding-top: 2.98666667rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
 }
 .top-team {
   width: 2.50666667rem;
   height: 2.50666667rem;
-  position: relative;
   border: 1px solid #dadada;
   border-width: 0.01333333rem;
   background: #ffffff;
@@ -101,6 +112,11 @@ li {
   border-radius: 10px;
   -webkit-border-radiu: 10px;
   -moz-border-radiu: 10px;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  margin-left: -1.25333333rem;
+  bottom: 0.38666667rem;
 }
 .top-team img {
   border-radius: 10px;
@@ -527,70 +543,58 @@ li {
   clear: both;
 }
 /*球员列表*/
-.per-list {
-  zoom: 1;
-  /*.px2rem(margin-left,-20);*/
-}
-.per-list:after {
-  content: "";
-  display: block;
-  height: 0;
-  clear: both;
-}
 .per-list li {
-  float: left;
-  width: 1.96rem;
-  height: 1.96rem;
-  border-radius: 5px;
-  -webkit-border-radiu: 5px;
-  -moz-border-radiu: 5px;
-  margin-left: 0.26666667rem;
+  display: inline-block;
+  text-align: left;
+  width: 24%;
   margin-bottom: 0.33333333rem;
-}
-.per-list li:nth-child(4n+1) {
-  margin-left: 0;
 }
 .per-list li img {
   wdith: 100%;
   height: 100%;
 }
+.per-list .per-li-img {
+  width: 1.96rem;
+  height: 1.96rem;
+  border-radius: 5px;
+  -webkit-border-radiu: 5px;
+  -moz-border-radiu: 5px;
+  display: inline-block;
+}
 /*合作伙伴列表*/
-.company-list {
-  zoom: 1;
-}
-.company-list:after {
-  content: "";
-  display: block;
-  height: 0;
-  clear: both;
-}
 .company-list li {
-  float: left;
-  width: 1.76rem;
-  height: 1.76rem;
-  border: 1px solid #fff;
-  margin-left: 0.46666667rem;
+  display: inline-block;
+  text-align: center;
+  width: 24%;
+  margin-bottom: 0.33333333rem;
 }
 .company-list li img {
   width: 100%;
   height: 100%;
+}
+.company-list li .company-img {
+  width: 1.76rem;
+  height: 1.76rem;
+  border: 1px solid #fff;
+  display: inline-block;
 }
 /*底部二维码*/
 .footer {
   padding: 1.06666667rem;
 }
 .code-list {
-  overflow: hidden;
+  text-align: center;
 }
 .code-list li {
-  float: left;
-  margin-left: 1.26666667rem;
-  width: 2.02666667rem;
+  display: inline-block;
+  text-align: center;
 }
 .code-list li .code-img {
   display: block;
   width: 2.02666667rem;
   height: 2.02666667rem;
+  margin-left: 0.64rem;
+  margin-right: 0.64rem;
 }
 .code-list li .code-img img {
   max-width: 100%;
@@ -653,10 +657,24 @@ li {
   display: inline-block;
   width: 100%;
   content: '';
-  height: 0.12rem;
+  height: 0.24rem;
   background: #feac00;
   position: absolute;
-  top: 0.97333333rem;
+  top: 0.85333333rem;
+  left: 0;
+  border-radius: 0 0 5px 5px;
+  -webkit-border-radiu: 0 0 5px 5px;
+  -moz-border-radiu: 0 0 5px 5px;
+  z-index: 0;
+}
+.main-btn:after {
+  display: inline-block;
+  width: 100%;
+  content: '';
+  height: 0.12rem;
+  background: #ffeb00;
+  position: absolute;
+  top: 0.85333333rem;
   left: 0;
   border-radius: 0 0 5px 5px;
   -webkit-border-radiu: 0 0 5px 5px;

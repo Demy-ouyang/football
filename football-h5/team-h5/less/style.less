@@ -66,7 +66,7 @@ li{
 }
 
 .header{
-  position: relative;
+ position: relative;
   .ui-placehold-img{
     position: relative;padding-top:445px/750px*100%;
     &>span{
@@ -84,6 +84,9 @@ li{
 .top-h2{
   display: block;color: @default-color;.px2px(font-size,42);.px2rem(padding-top,70); text-align: center;
   font-family: 'bdzongyi-a00fzzongyim05sarial';width:12em;margin:0 auto; line-height: 1.2;
+}
+.top-h4{
+  display: block;color: @default-color; font-family: 'bdzongyi-a00fzzongyim05sarial';margin:0 auto; line-height: 1.2;text-align: center;
 }
 .team-statu{
   .px2rem(width,690);margin:0 auto;.px2rem(padding,50);.px2px(font-size,32);color:@secColor;position: relative;.px2rem(margin-bottom,50);
@@ -128,7 +131,7 @@ li{
     }
   }
   article{
-    display: block;font-weight: normal;.px2px(font-size,28);color: @default-color;.px2rem(margin-bottom,25);
+    display: block;font-weight: normal;.px2px(font-size,32);color: @default-color;.px2rem(margin-bottom,25);
     &.main-p{
       text-indent: 2em;line-height: 42/28;
     }
@@ -137,108 +140,77 @@ li{
     display: block;;text-align: center;.px2px(font-size,32);line-height: 42/32;color:@thicolor;.px2rem(padding-bottom,25);
   }
 }
-/*比赛结果*/
-.team-result{
-  span{
-    display: inline-block;color:@default-color;.px2px(font-size,32);
-  }
-  .team-txt{
-    .px2rem(width,252);.px2rem(padding-top,50);
-  }
-  .team-name{
-    text-align: right;float: left;.team-txt();
-  }
-  .team-sort-box{
-    .px2rem(width,134);float: left;.px2rem(margin-left,25);position: relative;.px2rem(padding-bottom,95);
-    .team-logo1{
-      .team-logo();.px2rem(width,132);.px2rem(height,132);
-    }
-    .team-sort{
-     display: block; background: url("../images/medal.png") no-repeat;.px2rem(width,59);.px2rem(height,95);margin:0 auto;position: absolute;.px2rem(top,132);.px2rem(margin-left,39);text-align: center;vertical-align: bottom;line-height: 4; background-size: cover;
-    }
-  }
-  .team-money{
-    .team-txt();text-align: left;float:right;
+/*战队荣誉*/
+.team-medal{
+  .px2rem(margin-top,-40);position: relative;
+  .team-sort{
+    display: block;.px2rem(width,59);.px2rem(height,95);margin:0 auto;
+    background: url(../images/medal.png) no-repeat;
+    text-align: center;
+    background-size: cover;
   }
 }
-/*参赛队伍*/
-.team-list{
-  display: block;.clearfix();
-  li{
-    float: left;.px2rem(width,170);text-align: center;.px2rem(margin-bottom,20);
-    .team-logo2{
-      display:block;.team-logo();.px2rem(width,98);.px2rem(height,98);margin:0 auto;.border-radius(5px);
-      img{
-        .border-radius(5px);
+.team-tree{
+  .px2rem(width,550);margin:0 auto;
+  .tree-li{
+    .clearfix();position: relative;.px2px(font-size,32);color:@default-color;.px2rem(padding-top,30);.px2rem(padding-bottom,54);.px2rem(margin-bottom,-54);
+    span{
+      display: inline-block;
+    }
+    .tree-left{
+      float: left;text-align: right;width:7em;
+    }
+    .tree-right{
+      float: right;text-align: left;width:7em;
+    }
+    .tree-line{
+      .px2rem(width,3);height:100%;position: absolute;left:50%;.px2rem(margin-left,-1); background: @tree-line-color;.px2rem(margin-top,-30);
+      .tree-dot{
+        display:inline-block;.px2rem(width,11);.px2rem(height,11);.border-radius(50%);background: @tree-line-color;.px2rem(margin-left,-4);.px2rem(margin-top,54);
       }
     }
-    .team-name{
-      display: block;.px2px(font-size,26);color:@default-color;line-height: 72/26;
+    &:last-child{
+      .tree-line{background: none;}
     }
   }
+
 }
-/*比赛动态*/
-.article-top{
-  .clearfix();.px2rem(padding-left,25);
-  .per-img{
-    display: block;.px2rem(width,96);.px2rem(height,96);.border-radius(50%);
-    img{
-      width:100%;height:100%;
-    }
-  }
-  .top-title{
-    position: relative;width:100%;.px2rem(padding-left,115);
-  }
-  .top-h5{
-    display: block;.px2px(font-size,36);
-  }
-  .top-con{
-    .px2px(font-size,28);.clearfix();
-  }
-}
-/*球员列表*/
-.per-list{
+
+.team-person{
+  .clearfix();.px2rem(width,690);margin:0 auto;
   li{
-    display: inline-block;text-align: left;width:24%;.px2rem(margin-bottom,25);
-    img{
-      wdith:100%;height:100%;
+    .px2rem(margin,11); float: left;
+    span{display: block;}
+    .per-name{
+      text-align: center;color:@default-color;.px2px(font-size,28);
     }
-  }
-  .per-li-img{
-    .px2rem(width,147);.px2rem(height,147);.border-radius(5px);display: inline-block;
-  }
-}
-/*合作伙伴列表*/
-.company-list{
-  li{
-    display: inline-block;text-align: center;width:24%;.px2rem(margin-bottom,25);
-    img{
-      width:100%;height:100%;
-    }
-    .company-img{
-      .px2rem(width,132);.px2rem(height,132);border:1px solid #fff;display: inline-block;
-    }
-  }
-}
-/*底部二维码*/
-.footer{
- .px2rem(padding,80);
-}
-.code-list{
-text-align: center;
-  li{
-  display: inline-block;text-align: center;
-    .code-img{
-      display:block;.px2rem(width,152);.px2rem(height,152);.px2rem(margin-left,48);.px2rem(margin-right,48);
+    .per-img{
+      .border-radius(50%);.px2rem(padding,1);background: #fff;
       img{
-        max-width:100%;
+        width:100%;height:100%;.border-radius(50%);
       }
     }
-    .code-name{
-      display: block;.px2px(font-size,28);line-height: 40/28; text-align: center;padding-top:10px;
+    &.team-li-1{
+      .px2rem(width,98);.px2rem(padding-top,46);
+      .per-img{
+        .px2rem(width,96);.px2rem(height,96);
+      }
+    }
+    &.team-li-2{
+      .px2rem(width,112);.px2rem(padding-top,32);
+      .per-img{
+        .px2rem(width,110);.px2rem(height,110);
+      }
+    }
+    &.team-li-3{
+      .px2rem(width,144);
+      .per-img{
+        .px2rem(width,142);.px2rem(height,142);
+      }
     }
   }
 }
+
 .main-btn{
   display: block;.px2rem(width,610);.px2rem(height,82);.px2rem(line-height,73);margin:0 auto;.border-radius(5px);.px2rem(margin-bottom,60);background: @main-btn-bg;.px2px(font-size,30);text-align: center;color:@main-btn-color;position: relative;z-index:2;
   &:before{
@@ -249,34 +221,6 @@ text-align: center;
   }
 }
 
-/*比赛信息*/
-.team-vs{
-  .clearfix();position: relative;
-  .team-pk{
-    width:100%;position: absolute; text-align: center;
-  }
-}
-.team-box{
-  .px2rem(width,180);
-  .team-logo3{
-    display: block;.px2rem(width,132);.px2rem(height,132);.team-logo();margin:0 auto;
-  }
-  .team-name{
-   display: block; text-align: center;.px2px(font-size,28); padding-top:10px;
-  }
-}
-.team-pk{
-  display: block;.px2px(font-size,28);
-  span{
-    display: block;
-  }
-  .pk-time{
-    line-height: 42/28;
-  }
-  .pk-tag{
-    .px2px(font-size,56);
-  }
-}
 
 
 
