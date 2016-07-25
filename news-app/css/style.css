@@ -690,6 +690,52 @@ a {
   background: url("../images/com_tag2.png") no-repeat;
   background-size: cover;
 }
+.seal {
+  display: inline-block;
+  position: absolute;
+  width: 128px;
+  height: 113px;
+  right: 10px;
+  bottom: 10px;
+}
+[data-dpr="2"] .seal {
+  width: 255px;
+}
+[data-dpr="2.5"] .seal {
+  width: 319px;
+}
+[data-dpr="2.75"] .seal {
+  width: 351px;
+}
+[data-dpr="3"] .seal {
+  width: 383px;
+}
+[data-dpr="4"] .seal {
+  width: 510px;
+}
+[data-dpr="2"] .seal {
+  height: 225px;
+}
+[data-dpr="2.5"] .seal {
+  height: 281px;
+}
+[data-dpr="2.75"] .seal {
+  height: 309px;
+}
+[data-dpr="3"] .seal {
+  height: 338px;
+}
+[data-dpr="4"] .seal {
+  height: 450px;
+}
+.seal.pass {
+  background: url("../images/pass.png") no-repeat;
+  background-size: cover;
+}
+.seal.unpass {
+  background: url("../images/unpass.png") no-repeat;
+  background-size: cover;
+}
 .cuuju-compt-pk {
   margin-right: 21px;
   margin-top: 15px;
