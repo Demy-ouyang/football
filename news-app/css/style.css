@@ -1948,3 +1948,111 @@ a {
     background-position: center 1134px, 0 0;
   }
 }
+.del-box {
+  width: 100%;
+  text-align: center;
+  color: #666666;
+  font-size: 14px;
+  margin-top: 130px;
+}
+[data-dpr="2"] .del-box {
+  font-size: 28px;
+}
+[data-dpr="2.5"] .del-box {
+  font-size: 35px;
+}
+[data-dpr="2.75"] .del-box {
+  font-size: 39px;
+}
+[data-dpr="3"] .del-box {
+  font-size: 42px;
+}
+[data-dpr="4"] .del-box {
+  font-size: 56px;
+}
+[data-dpr="2"] .del-box {
+  margin-top: 260px;
+}
+[data-dpr="2.5"] .del-box {
+  margin-top: 325px;
+}
+[data-dpr="2.75"] .del-box {
+  margin-top: 358px;
+}
+[data-dpr="3"] .del-box {
+  margin-top: 390px;
+}
+[data-dpr="4"] .del-box {
+  margin-top: 520px;
+}
+.del-box .del-con {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #ffde00;
+  width: 140px;
+  height: 140px;
+  line-height: 140px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+[data-dpr="2"] .del-box .del-con {
+  width: 280px;
+}
+[data-dpr="2.5"] .del-box .del-con {
+  width: 350px;
+}
+[data-dpr="2.75"] .del-box .del-con {
+  width: 385px;
+}
+[data-dpr="3"] .del-box .del-con {
+  width: 420px;
+}
+[data-dpr="4"] .del-box .del-con {
+  width: 560px;
+}
+[data-dpr="2"] .del-box .del-con {
+  height: 280px;
+}
+[data-dpr="2.5"] .del-box .del-con {
+  height: 350px;
+}
+[data-dpr="2.75"] .del-box .del-con {
+  height: 385px;
+}
+[data-dpr="3"] .del-box .del-con {
+  height: 420px;
+}
+[data-dpr="4"] .del-box .del-con {
+  height: 560px;
+}
+[data-dpr="2"] .del-box .del-con {
+  line-height: 280px;
+}
+[data-dpr="2.5"] .del-box .del-con {
+  line-height: 350px;
+}
+[data-dpr="2.75"] .del-box .del-con {
+  line-height: 385px;
+}
+[data-dpr="3"] .del-box .del-con {
+  line-height: 420px;
+}
+[data-dpr="4"] .del-box .del-con {
+  line-height: 560px;
+}
+[data-dpr="2"] .del-box .del-con {
+  margin-bottom: 70px;
+}
+[data-dpr="2.5"] .del-box .del-con {
+  margin-bottom: 88px;
+}
+[data-dpr="2.75"] .del-box .del-con {
+  margin-bottom: 96px;
+}
+[data-dpr="3"] .del-box .del-con {
+  margin-bottom: 105px;
+}
+[data-dpr="4"] .del-box .del-con {
+  margin-bottom: 140px;
+}
