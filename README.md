@@ -16,7 +16,7 @@
 
 
 ### 微信分享页
-- [竞赛](http://demy-ouyang.github.io/football/competition-h5)
+- [竞猜](http://demy-ouyang.github.io/football/competition-h5)
 - [大转盘](http://demy-ouyang.github.io/football/cuuju-quiz)
 - [大转盘中奖结果](http://demy-ouyang.github.io/football/cuuju-quiz-result)
 - 个人展示页
