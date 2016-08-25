@@ -4,6 +4,9 @@
 ### APP内页
 #### 蹴鞠内测版APP消息页面
 - [赛事消息](http://demy-ouyang.github.io/football/news-app/Competition-news.html)
+
+![demo](http://demy-ouyang.github.io/football/code-images/app_news.png)
+
 - [赛事消息-审核通知](http://demy-ouyang.github.io/football/news-app/Competition-shenhe.html)
 - [赛事消息-上场名单](http://demy-ouyang.github.io/football/news-app/Competition-on.html)
 - [赛事比分结果失败](http://demy-ouyang.github.io/football/Competition-lose.html)
