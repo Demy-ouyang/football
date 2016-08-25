@@ -20,7 +20,7 @@
 - [大转盘](http://demy-ouyang.github.io/football/cuuju-quiz)
 - [大转盘中奖结果](http://demy-ouyang.github.io/football/cuuju-quiz-result)
 - 个人展示页
-   * [个人展示页--男性](http://demy-ouyang.github.io/football/football-h5/person-h5)
+   * [个人展示页--男性](http://demy-ouyang.github.io/football/football-h5/person-h5/index.html)
    * [个人展示页--女性](http://demy-ouyang.github.io/football/football-h5/person-h5/2.html)
 - 赛事分享
    * [赛前分享](http://demy-ouyang.github.io/football/football-h5/share-h5/before.html)
