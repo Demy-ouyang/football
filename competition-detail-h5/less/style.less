@@ -1,0 +1,258 @@
+@charset "utf-8";
+@import "_variable";
+@import "_mixin";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjzdust: 100%;
+  height:100%;
+}
+
+body {
+  line-height: 1.6;
+  font-family: @sansFont;
+  height:100%;
+  background-color: @bodyBg;
+}
+
+img {
+  border: 0;
+}
+
+a {
+  text-decoration: none;color: @DefaultColor;
+}
+ul,li{list-style: none;}
+.fl{
+  .float(left);
+}
+.fr{
+  .float(right);
+}
+
+//全局
+.wrap{
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+//
+.cuuju-panel{
+  background-color: @white; .border();margin-bottom:@section-margin;
+}
+
+.cuuju-compt-pk{
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: @thiColor;
+  padding: @padding-lr-width (2 * @padding-lr-width);
+
+}
+.cuuju-pk-team{
+  width:@team-width;
+  .cuuju-team-hd{
+    width:@team-width;height:@team-width;
+    img{
+      width:100%;height:100%;.border-radius(5px);
+    }
+  }
+  .cuuju-team-bd{
+    .px2px(font-size,28);color:@secColor;line-height: 2;
+  }
+}
+.cuuju-pk-detail{
+  position: relative;position: absolute;left:30%;right:30%;
+  .pk-title{
+    .px2px(font-size,28);color:@thiColor;font-weight: normal;margin-top:6px;margin-bottom:6px;
+  }
+  .pk-tag{
+    display: inline-block;background-color: @huibg;color:@white;.px2px(font-size,50);.border-radius(5px);padding:3px 5px;line-height: 1;
+  }
+}
+.pk-score{
+  max-width:107px;margin:10px auto;padding-top:10px;overflow: hidden;
+  .score-tag{
+    width:@score-tag-width;height:@score-tag-height; background-color:@score-tag-bg; position: relative;.border-radius(3px); text-align: center;
+    &:before{
+      display: block;content: '';width:2px;height:4px;position:absolute;top:-2px;left:12px;background: @huibg;
+    }
+    &:after{
+      display: block;content: '';width:2px;height:4px;position:absolute;top:-2px;right:12px;background: @huibg;
+    }
+  }
+  .score-number{
+    color:#23ae17;display: inline-block;.px2px(font-size,68);line-height: @score-tag-height;/*font-family:Helvetica;*/text-align: center;
+    &.active{
+      color:#fff;
+    }
+  }
+  .num-left{
+   /* margin-left:-4px;position: relative;*/
+  }
+  .num-right{
+    margin-left:-4px;position: relative;
+  }
+
+  .score-diviver{
+    display: inline-block;text-align: center;color:@forColor;.px2px(font-size,68);line-height: 1;
+  }
+}
+
+
+.cuuju-cells{
+  .border();
+}
+.cuuju-cell{
+  .border-top();padding:@padding-tb-width @padding-lr-width;.flex-box();.flex-align(center);
+
+  &:first-child{
+   &:before{
+     display: none;
+   }
+  }
+
+  .cuuju-hd{
+    width:20px;height:20px;margin-right:10px;
+    .icon{
+      width:100%;height:100%;background-size: cover;display: inline-block;
+    }
+    .icon-1{background-image: url("../images/icon1.png");}
+    .icon-2{background-image: url("../images/icon2.png");}
+    .icon-3{background-image: url("../images/icon3.png");}
+    .icon-4{background-image: url("../images/icon4.png");}
+    .icon-5{background-image: url("../images/icon5.png");}
+    .icon-6{background-image: url("../images/icon6.png");}
+    .icon-7{background-image: url("../images/icon7.png");}
+  }
+  .cuuju-bd{
+    .flex-width(1);.px2px(font-size,32);
+  }
+  .cuuju_cell_ft{
+    .px2px(font-size,32);display: inline-block;text-align: right;
+  }
+}
+
+.cuuju-inner-panel{
+  padding:@padding-lr-width;.border-top();
+}
+.cuuju-card{
+  .flex-box();.flex-align(center);
+  .cuuju-card-hd{
+    width:@img-size;height:@img-size;margin-right:@padding-lr-width;
+    img{
+      width:100%;height:100%;.border-radius(50%);
+    }
+  }
+  .cuuju-card-bd{
+    .flex-width(1);line-height: @img-size;
+  }
+  .cuuju_card_ft{
+    display: inline-block;color:@card-fr-color;.px2px(font-size,28);line-height: @img-size;text-align: right;
+  }
+}
+
+.cuuju-main-p{
+  display: block;color:@main-p-color;.px2px(font-size,28);padding:20px 0;
+}
+.theme-color{
+  display: inline-block;color:@themeColor;
+}
+.zan-panel{
+  position: relative;
+  .zan-hd{
+    overflow: hidden;display: inline-block;height:@lit-img-size; position: absolute;right:98px;left:0;
+  }
+  .zan-person{
+   overflow: hidden;height:@lit-img-size;
+    li{
+      display:inline-block;width:@lit-img-size;height:@lit-img-size;margin-right:1px;float: left;
+      .zan-img-box{
+        width:100%;height:100%;
+        img{
+          width:100%;height:100%;.border-radius(50%);
+        }
+      }
+    }
+  }
+  .zan-bd{
+    display: block;.px2px(font-size,28);line-height: @lit-img-size;color:#9f9f9f;text-align: right;
+  }
+}
+
+.cuuju-persons{
+  .border-top();padding:@padding-tb-width 0 @padding-tb-width @padding-lr-width;z-index:1;margin:0 auto;height:100px;
+  .person-imgbox{
+    width:@img-size;height:@img-size;display: block;margin:0 auto;
+    img{
+      width:100%;height: 100%;.border-radius(50%);
+    }
+  }
+  .person-name{
+    display:block;.px2px(font-size,26);color:@secColor;text-align: center;width:100%;
+  }
+}
+
+/*swiper*/
+.cuuju-swiper-wrapper{
+  width:100%;height:100%;  box-sizing: content-box;.flex-box();position:absolute;
+  .swiper-slide{
+    width:@img-size;/*.flex-box();.flex-align(center);.flex-hw();*/
+  }
+}
+.swiper-pagination-bullet-active{
+  background-color: #666;
+}
+
+.btn-list{
+  padding:@padding-lr-width 9px;width:100%;
+  .btn{
+    display: inline-block;width:100%;
+    text-align: center;height:@btn-height;line-height: @btn-height;
+    .border-radius(3px);
+    &.btn-green {
+      background-color: @theme-btn-bg;
+      color: @white;
+      border:1px solid @theme-btn-border;
+    }
+    &.btn-default {
+      background-color: @default-btn-bg;
+      color: @white;
+      border:1px solid @default-btn-border;
+    }
+  }
+  .row{
+    margin-left:-2%;
+    .col-6{
+      width:48%;margin-left:2%;float: left;
+    }
+  }
+}
+.wrap-footer-fixed{
+  padding-bottom:(2 * @padding-lr-width)+ (@btn-height + 2px) - @section-margin;
+}
+.footer-fixed{
+  position: fixed;bottom:0;z-index:99;
+}
+
+
+@media screen and (max-width: 320px) {
+  .cuuju-compt-pk{
+    padding:@padding-lr-width;
+  }
+}
+
+
+
+
+
+
+
+
