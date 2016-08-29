@@ -81,7 +81,7 @@
             <div class="cuuju_cell_ft">9人</div>
         </div>
         <div class="cuuju-persons swiper-container">
-            <div class="cuuju-swiper-wrapper swiper-wrapper dateul">
+            <div class="cuuju-swiper-wrapper swiper-wrapper">
                 <div class="swiper-slide">
                     <span class="person-imgbox"><img src="images/member1.png" alt=""/></span>
                     <span class="person-name">李志远1</span>
@@ -228,45 +228,14 @@
     </section>
 </div>
 
-<!--<script src="js/swiper.min.js"></script>
+<script src="js/swiper.min.js"></script>
 <script>
     var swiper = new Swiper('.swiper-container', {
-        pagination: false,
-        slidesPerView: 'auto',
-        paginationClickable: true,
+        freeMode : true,
+        //slidesPerView: 6,
+        slidesPerView : 'auto',
         spaceBetween: 10,
     });
-</script>-->
-<script src="http://m.cuuju.com/Content/_WeiXin/jquery-1.8.3.min.js"></script>
-<script src="js/slider.js"></script>
-<script>
-    console.info($(".dateul"))
-    MySlide.init('dateul', function (obj, tempp) {
-        //alert(55);
-        // 滑动中事件
-        //alert(obj.css('left') + '|' + initleft);
-        if (tempp < 0) {
-            // 向左 <-
-            obj.css('left', MySlide.begin + tempp);
-        } else if (tempp > 0) {
-            // 向右 ->
-            obj.css('left', MySlide.begin + tempp);
-        }
-    }, function (obj, tempp) {
-        // 滑动结束事件
-        if (tempp < 0) {
-            // 向左 <-
-            var max = $(".dateul .swiper-slide").width() * $(".dateul .swiper-slide").length;
-            if (parseInt(obj.css('left')) < -(max - obj.parent().prev().width()))
-                obj.css('left', -(max - obj.parent().prev().width()));
-        } else if (tempp > 0) {
-            // 向右 ->
-            if (parseInt(obj.css('left')) > 0)
-                obj.css('left', 0);
-        }
-       MySlide.begin = obj.css('left');
-        //alert( obj.parents('.cuuju-panel').width());
-    }); // 点击事件
 </script>
 </body>
 </html>

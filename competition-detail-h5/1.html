@@ -7,7 +7,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection"content="telephone=no, email=no" />
     <title>比赛详情</title>
-    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
@@ -110,8 +109,6 @@
                     <span class="person-name">李志远9</span>
                 </div>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
         </div>
     </section>
 
@@ -180,9 +177,9 @@
 <script src="js/swiper.min.js"></script>
 <script>
     var swiper = new Swiper('.swiper-container', {
-        pagination: false,
-        slidesPerView: 'auto',
-        paginationClickable: true,
+        freeMode : true,
+        //slidesPerView: 6,
+        slidesPerView : 'auto',
         spaceBetween: 10,
     });
 </script>
