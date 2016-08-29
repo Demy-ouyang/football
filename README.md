@@ -15,7 +15,7 @@
 
 ![demo](http://demy-ouyang.github.io/football/code-images/app_2.png)
 
-- [赛事比分结果失败](http://demy-ouyang.github.io/football/Competition-lose.html)
+- [赛事比分结果失败](http://demy-ouyang.github.io/football/news-app/Competition-lose.html)
 - [球队消息-申请通知](http://demy-ouyang.github.io/football/news-app/team-news-apply.html)
 - [球队消息-开除球员通知](http://demy-ouyang.github.io/football/news-app/team-news-dismiss.html)
 - [球队消息-退出球队通知](http://demy-ouyang.github.io/football/news-app/team-news-leave.html)
@@ -36,8 +36,8 @@
 
 ![demo](http://demy-ouyang.github.io/football/code-images/competition.png)
 
-- [大转盘](http://demy-ouyang.github.io/football/cuuju-quiz)
-- [大转盘中奖结果](http://demy-ouyang.github.io/football/cuuju-quiz-result)
+- [大转盘](http://demy-ouyang.github.io/football/cuuju-quiz/index.html)
+- [大转盘中奖结果](http://demy-ouyang.github.io/football/cuuju-quiz-result/index.html)
 - 个人展示页
    * 个人展示页--男性
    
