@@ -2218,11 +2218,13 @@ li {
   -moz-border-radius: 5px;
   border-radius: 5px;
   background: #dedede;
-  width: 23%;
-  margin: 0 1%;
-  padding-bottom: 23%;
-  height: 0;
   overflow: hidden;
+  width: 1.86666667rem;
+  height: 1.86666667rem;
+  margin-right: 0.26666667rem;
+}
+.more-pic li:last-child {
+  margin-right: 0;
 }
 .more-pic li span {
   -webkit-border-radius: 5px;
@@ -2230,9 +2232,11 @@ li {
   border-radius: 5px;
   background-size: 100% auto;
   width: 100%;
+  height: 100%;
 }
 .more-pic li span img {
   width: 100%;
+  height: 100%;
 }
 .more-pic .more-pic {
   display: inline-block;
