@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection"content="telephone=no, email=no" />
+    <title>10数据统计详情已开启-球员</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+//tab切start
+            $(function(){
+                $("#tablist li").click(function(){
+                    $("#tablist li").removeClass("active");
+                    $(this).addClass("active");
+                    $("#tabcon .tab-item").hide();
+                    var _index=$(this).index();
+                    $("#tabcon .tab-item:eq("+_index+")").show();
+                });
+            });
+//tab切换end
+        });
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <div class="cuuju-panel">
+        <div class="cuuju-compt-pk">
+            <div class="cuuju-pk-team fl">
+                <div class="cuuju-team-hd">
+                    <img src="images/team1.png" alt="" class="cuuju-team-photo"/>
+                </div>
+                <div class="cuuju-team-bd">凯英球队</div>
+            </div>
+            <div class="cuuju-pk-detail">
+                <div class="pk-score">
+                    <span class="score-number">2 </span>
+                    <span class="score-diviver">:</span>
+                    <span class="score-number">1 </span>
+                </div>
+                <h4 class="pk-title">第19轮-第18场</h4>
+            </div>
+            <div class="cuuju-pk-team fr">
+                <div class="cuuju-team-hd">
+                    <img src="images/team2.png" alt="" class="cuuju-team-photo"/>
+                </div>
+                <div class="cuuju-team-bd">凯英球队</div>
+            </div>
+        </div>
+        <div class="cuuju-cells">
+            <div class="cuuju-cell">
+                <div class="cuuju-hd"><i class="icon icon-2"></i></div>
+                <div class="cuuju-bd">
+                    时间
+                </div>
+                <div class="cuuju_cell_ft ">2015-6-7 18:30(周三)</div>
+            </div>
+            <div class="cuuju-cell">
+                <div class="cuuju-hd"><i class="icon icon-4"></i></div>
+                <div class="cuuju-bd">
+                    地点
+                </div>
+                <div class="cuuju_cell_ft ">北京市海淀区科技大学</div>
+            </div>
+        </div>
+    </div>
+    <div class="cuuju-panel">
+        <div class="cuuju-cell2">
+            <ul class="tab-list" id="tablist">
+                <li class="tab-li">球队数据</li>
+                <li class="tab-li active">球员数据</li>
+            </ul>
+        </div>
+        <div class="data-content" id="tabcon">
+            <div class="tab-item" style="display: none">
+                <div class="data-box">
+                    <div class="data-header">
+                        <div class="data-top1 data-row">
+                            <div class="col-3"><span class="data-team">凯英八零</span></div>
+                            <div class="col-4"><span class="data-vs">vs</span></div>
+                            <div class="col-3"><span class="data-team">无敌队</span></div>
+                        </div>
+                        <div class="data-top-line line-down">
+                            <em class="out-line">1</em>
+                            <em class="mid-line">1</em>
+                        </div>
+                        <!--<h3 class="data-top2">控场力</h3>-->
+                    </div>
+                    <div class="team-pk-data">
+                        <div class="cuuju-cell2">
+                            <div class="pk-top">
+                                <span class="left">55%</span>
+                                <span class="center">控场力</span>
+                                <span class="right">30%</span>
+                            </div>
+                            <div class="pk-color">
+                                <span class="pk-team1" style="width:70%;"></span>
+                                <span class="pk-team2" style="width:30%;"></span>
+                            </div>
+                        </div>
+                        <div class="data-pk-con">
+                            <div class="data-row clearfix">
+                                <div class="col-3">
+                                    <div class="data-team-bar">
+                                        <span class="pk-team1" style="width:10%;"></span>
+                                    </div>
+                                </div>
+                                <div class="col-1">
+                                    <span class="data-ball">5</span>
+                                </div>
+                                <div class="col-2">
+                                    <span class="data-action">进球</span>
+                                </div>
+                                <div class="col-1">
+                                    <span class="data-ball">3</span>
+                                </div>
+                                <div class="col-3">
+                                    <div class="data-team-bar">
+                                        <span class="pk-team2" style="width:30%;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-row clearfix">
+                                <div class="col-3">
+                                    <div class="data-team-bar">
+                                        <span class="pk-team1" style="width:20%;"></span>
+                                    </div>
+                                </div>
+                                <div class="col-1">
+                                    <span class="data-ball">5</span>
+                                </div>
+                                <div class="col-2">
+                                    <span class="data-action">助攻</span>
+                                </div>
+                                <div class="col-1">
+                                    <span class="data-ball">3</span>
+                                </div>
+                                <div class="col-3">
+                                    <div class="data-team-bar">
+                                        <span class="pk-team2" style="width:30%;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-row clearfix">
+                                <div class="col-3">
+                                    <div class="data-team-bar">
+                                        <span class="pk-team1" style="width:40%;"></span>
+                                    </div>
+                                </div>
+                                <div class="col-1">
+                                    <span class="data-ball">5</span>
+                                </div>
+                                <div class="col-2">
+                                    <span class="data-action">射门</span>
+                                </div>
+                                <div class="col-1">
+                                    <span class="data-ball">3</span>
+                                </div>
+                                <div class="col-3">
+                                    <div class="data-team-bar">
+                                        <span class="pk-team2" style="width:30%;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-row clearfix">
+                                <div class="col-3">
+                                    <div class="data-team-bar">
+                                        <span class="pk-team1" style="width:60%;"></span>
+                                    </div>
+                                </div>
+                                <div class="col-1">
+                                    <span class="data-ball">5</span>
+                                </div>
+                                <div class="col-2">
+                                    <span class="data-action">射正</span>
+                                </div>
+                                <div class="col-1">
+                                    <span class="data-ball">3</span>
+                                </div>
+                                <div class="col-3">
+                                    <div class="data-team-bar">
+                                        <span class="pk-team2" style="width:30%;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-row clearfix">
+                                <div class="col-3">
+                                    <div class="data-team-bar">
+                                        <span class="pk-team1" style="width:30%;"></span>
+                                    </div>
+                                </div>
+                                <div class="col-1">
+                                    <span class="data-ball">5</span>
+                                </div>
+                                <div class="col-2">
+                                    <span class="data-action">射偏</span>
+                                </div>
+                                <div class="col-1">
+                                    <span class="data-ball">3</span>
+                                </div>
+                                <div class="col-3">
+                                    <div class="data-team-bar">
+                                        <span class="pk-team2" style="width:30%;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-row clearfix">
+                                <div class="col-3">
+                                    <div class="data-team-bar">
+                                        <span class="pk-team1" style="width:80%;"></span>
+                                    </div>
+                                </div>
+                                <div class="col-1">
+                                    <span class="data-ball">5</span>
+                                </div>
+                                <div class="col-2">
+                                    <span class="data-action">角球</span>
+                                </div>
+                                <div class="col-1">
+                                    <span class="data-ball">3</span>
+                                </div>
+                                <div class="col-3">
+                                    <div class="data-team-bar">
+                                        <span class="pk-team2" style="width:30%;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-row clearfix">
+                                <div class="col-3">
+                                    <div class="data-team-bar">
+                                        <span class="pk-team1" style="width:90%;"></span>
+                                    </div>
+                                </div>
+                                <div class="col-1">
+                                    <span class="data-ball">5</span>
+                                </div>
+                                <div class="col-2">
+                                    <span class="data-action">任意球</span>
+                                </div>
+                                <div class="col-1">
+                                    <span class="data-ball">3</span>
+                                </div>
+                                <div class="col-3">
+                                    <div class="data-team-bar">
+                                        <span class="pk-team2" style="width:30%;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-row clearfix">
+                                <div class="col-3">
+                                    <div class="data-team-bar">
+                                        <span class="pk-team1" style="width:60%;"></span>
+                                    </div>
+                                </div>
+                                <div class="col-1">
+                                    <span class="data-ball">5</span>
+                                </div>
+                                <div class="col-2">
+                                    <span class="data-action">传球成功</span>
+                                </div>
+                                <div class="col-1">
+                                    <span class="data-ball">3</span>
+                                </div>
+                                <div class="col-3">
+                                    <div class="data-team-bar">
+                                        <span class="pk-team2" style="width:30%;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-row clearfix">
+                            <div class="col-3">
+                                <div class="data-team-bar">
+                                    <span class="pk-team1" style="width:90%;"></span>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <span class="data-ball">5</span>
+                            </div>
+                            <div class="col-2">
+                                <span class="data-action">过人</span>
+                            </div>
+                            <div class="col-1">
+                                <span class="data-ball">3</span>
+                            </div>
+                            <div class="col-3">
+                                <div class="data-team-bar">
+                                    <span class="pk-team2" style="width:30%;"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="data-row clearfix">
+                            <div class="col-3">
+                                <div class="data-team-bar">
+                                    <span class="pk-team1" style="width:80%;"></span>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <span class="data-ball">5</span>
+                            </div>
+                            <div class="col-2">
+                                <span class="data-action">拦截成功</span>
+                            </div>
+                            <div class="col-1">
+                                <span class="data-ball">3</span>
+                            </div>
+                            <div class="col-3">
+                                <div class="data-team-bar">
+                                    <span class="pk-team2" style="width:30%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-row clearfix">
+                            <div class="col-3">
+                                <div class="data-team-bar">
+                                    <span class="pk-team1" style="width:20%;"></span>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <span class="data-ball">5</span>
+                            </div>
+                            <div class="col-2">
+                                <span class="data-action">抢断</span>
+                            </div>
+                            <div class="col-1">
+                                <span class="data-ball">3</span>
+                            </div>
+                            <div class="col-3">
+                                <div class="data-team-bar">
+                                    <span class="pk-team2" style="width:30%;"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="data-row clearfix">
+                            <div class="col-3">
+                                <div class="data-team-bar">
+                                    <span class="pk-team1" style="width:40%;"></span>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <span class="data-ball">5</span>
+                            </div>
+                            <div class="col-2">
+                                <span class="data-action">解围</span>
+                            </div>
+                            <div class="col-1">
+                                <span class="data-ball">3</span>
+                            </div>
+                            <div class="col-3">
+                                <div class="data-team-bar">
+                                    <span class="pk-team2" style="width:30%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-row clearfix">
+                            <div class="col-3">
+                                <div class="data-team-bar">
+                                    <span class="pk-team1" style="width:40%;"></span>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <span class="data-ball">5</span>
+                            </div>
+                            <div class="col-2">
+                                <span class="data-action">扑救</span>
+                            </div>
+                            <div class="col-1">
+                                <span class="data-ball">3</span>
+                            </div>
+                            <div class="col-3">
+                                <div class="data-team-bar">
+                                    <span class="pk-team2" style="width:30%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-row clearfix">
+                            <div class="col-3">
+                                <div class="data-team-bar">
+                                    <span class="pk-team1" style="width:40%;"></span>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <span class="data-ball">5</span>
+                            </div>
+                            <div class="col-2">
+                                <span class="data-action">犯规</span>
+                            </div>
+                            <div class="col-1">
+                                <span class="data-ball">3</span>
+                            </div>
+                            <div class="col-3">
+                                <div class="data-team-bar">
+                                    <span class="pk-team2" style="width:30%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-row clearfix">
+                            <div class="col-3">
+                                <div class="data-team-bar">
+                                    <span class="pk-team1" style="width:40%;"></span>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <span class="data-ball">5</span>
+                            </div>
+                            <div class="col-2">
+                                <span class="data-action">越位</span>
+                            </div>
+                            <div class="col-1">
+                                <span class="data-ball">3</span>
+                            </div>
+                            <div class="col-3">
+                                <div class="data-team-bar">
+                                    <span class="pk-team2" style="width:30%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-row clearfix">
+                            <div class="col-3">
+                                <div class="data-team-bar">
+                                    <span class="pk-team1" style="width:20%;"></span>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <span class="data-ball">5</span>
+                            </div>
+                            <div class="col-2">
+                                <span class="data-action">黄牌</span>
+                            </div>
+                            <div class="col-1">
+                                <span class="data-ball">3</span>
+                            </div>
+                            <div class="col-3">
+                                <div class="data-team-bar">
+                                    <span class="pk-team2" style="width:70%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="data-row clearfix">
+                            <div class="col-3">
+                                <div class="data-team-bar">
+                                    <span class="pk-team1" style="width:20%;"></span>
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <span class="data-ball">5</span>
+                            </div>
+                            <div class="col-2">
+                                <span class="data-action">红牌</span>
+                            </div>
+                            <div class="col-1">
+                                <span class="data-ball">3</span>
+                            </div>
+                            <div class="col-3">
+                                <div class="data-team-bar">
+                                    <span class="pk-team2" style="width:50%;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-item" style="display: block">
+                <div class="data-box">
+                    <div class="data-header">
+                        <div class="data-top1 data-row">
+                            <div class="col-3"><span class="data-team">凯英八零</span></div>
+                            <div class="col-4"><span class="data-vs">vs</span></div>
+                            <div class="col-3"><span class="data-team">无敌队</span></div>
+                        </div>
+                        <div class="data-top-line line-down">
+                            <em class="out-line">1</em>
+                            <em class="mid-line">1</em>
+                        </div>
+                        <h3 class="data-top2">首发上场</h3>
+                    </div>
+                    <div class="data-con clearfix">
+                        <div class="left">
+                            <div class="data-member">
+                                <div class="data-hd">
+                            <span class="member-pic">
+                                <img src="images/pic1.jpg" alt=""/>
+                                <em class="member-num">46</em>
+                                <!--黄牌-->
+                                <div class="member-card">
+                                    <em class="red-cord"></em>
+                                    <em class="yellow-cord"></em>
+                                </div>
+                                <!--黄牌-->
+                            </span>
+                                    <span class="member-status bg-green">守门员</span>
+
+                                </div>
+                                <div class="data-bd">
+                                    <span class="member-name">王凯力</span>
+                                </div>
+                            </div>
+                            <div class="data-member">
+                                <div class="data-hd">
+                            <span class="member-pic">
+                                <img src="images/pic1.jpg" alt=""/>
+                                <em class="member-num">46</em>
+                                <!--黄牌-->
+                                <div class="member-card">
+                                    <em class="yellow-cord">11</em>
+                                    <em class="yellow-cord">22</em>
+                                </div>
+                                <!--黄牌-->
+                            </span>
+                                    <span class="member-status bg-blue">前锋</span>
+
+                                </div>
+                                <div class="data-bd have-ball">
+                                    <span class="member-name">王凯力</span>
+                                    <div class="have-ball-num">
+                                        <span class="lit-ball lit-ball2">
+                                             <i class="lit-ball-img ball-img2"></i>
+                                            <i class="lit-ball-num">41</i>
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-member">
+                                <div class="data-hd">
+                            <span class="member-pic">
+                                <img src="images/pic1.jpg" alt=""/>
+                                <em class="member-num">46</em>
+
+                            </span>
+                                    <span class="member-status bg-blue">前锋</span>
+
+                                </div>
+                                <div class="data-bd have-ball">
+                                    <span class="member-name">王凯力</span>
+                                    <div class="have-ball-num">
+
+                                        <span class="lit-ball lit-ball1">
+                                             <i class="lit-ball-img ball-img1"></i>
+                                            <i class="lit-ball-num ">41</i>
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-member">
+                                <div class="data-hd">
+                            <span class="member-pic">
+                                <img src="images/pic1.jpg" alt=""/>
+                                <em class="member-num">46</em>
+
+                            </span>
+                                    <span class="member-status bg-blue">前锋</span>
+
+                                </div>
+                                <div class="data-bd have-ball">
+                                    <span class="member-name">王凯力</span>
+                                    <div class="have-ball-num">
+                                        <span class="lit-ball">
+                                             <i class="lit-ball-img ball-img0"></i>
+                                            <i class="lit-ball-num">41</i>
+                                        </span>
+                                        <span class="lit-ball lit-ball1">
+                                             <i class="lit-ball-img ball-img1"></i>
+                                            <i class="lit-ball-num ">41</i>
+                                        </span>
+                                        <span class="lit-ball lit-ball2">
+                                             <i class="lit-ball-img ball-img2"></i>
+                                            <i class="lit-ball-numc ">41</i>
+                                        </span>
+                                        <span class="lit-ball lit-ball3">
+                                             <i class="lit-ball-img ball-img3"></i>
+                                            <i class="lit-ball-num ">22</i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="data-member">
+                                <div class="data-hd">
+                            <span class="member-pic">
+                                <img src="images/pic1.jpg" alt=""/>
+                                <em class="member-num">46</em>
+                                <!--红牌-->
+                                <div class="member-card">
+                                    <em class="red-cord"></em>
+                                </div>
+                                <!--红牌-->
+                            </span>
+                                    <span class="member-status bg-green">守门员</span>
+
+                                </div>
+                                <div class="data-bd">
+                                    <span class="member-name">王凯力</span>
+                                </div>
+                            </div>
+                            <div class="data-member">
+                                <div class="data-hd">
+                            <span class="member-pic">
+                                <img src="images/pic1.jpg" alt=""/>
+                                <em class="member-num">46</em>
+                                <!--红牌-->
+                                <div class="member-card">
+                                    <em class="red-cord"></em>
+                                </div>
+                                <!--红牌-->
+                            </span>
+                                    <span class="member-status bg-blue">前锋</span>
+
+                                </div>
+                                <div class="data-bd have-ball">
+                                    <span class="member-name">王凯力</span>
+                                    <div class="have-ball-num">
+                                        <span class="lit-ball">
+                                             <i class="lit-ball-img ball-img0"></i>
+                                            <i class="lit-ball-num">11</i>
+                                        </span>
+                                        <span class="lit-ball lit-ball1">
+                                             <i class="lit-ball-img ball-img1"></i>
+                                            <i class="lit-ball-num">4</i>
+                                        </span>
+                                        <span class="lit-ball lit-ball2">
+                                             <i class="lit-ball-img ball-img2"></i>
+                                            <i class="lit-ball-num">4</i>
+                                        </span>
+                                        <span class="lit-ball lit-ball3">
+                                             <i class="lit-ball-img ball-img3"></i>
+                                            <i class="lit-ball-num">4</i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-member">
+                                <div class="data-hd">
+                            <span class="member-pic">
+                                <img src="images/pic1.jpg" alt=""/>
+                                <em class="member-num">46</em>
+
+                            </span>
+                                    <span class="member-status bg-blue">前锋</span>
+
+                                </div>
+                                <div class="data-bd have-ball">
+                                    <span class="member-name">王凯力</span>
+                                    <div class="have-ball-num">
+
+                                        <span class="lit-ball lit-ball2">
+                                              <i class="lit-ball-num">4</i><i class="lit-ball-img ball-img2"></i>
+
+                                        </span>
+                                        <span class="lit-ball lit-ball3">
+                                             <i class="lit-ball-num">4</i><i class="lit-ball-img ball-img3"></i>
+
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-member">
+                                <div class="data-hd">
+                            <span class="member-pic">
+                                <img src="images/pic1.jpg" alt=""/>
+                                <em class="member-num">46</em>
+
+                            </span>
+                                    <span class="member-status bg-blue">前锋</span>
+
+                                </div>
+                                <div class="data-bd have-ball">
+
+                                    <span class="member-name">王凯力</span>
+                                    <div class="have-ball-num">
+                                        <span class="lit-ball">
+                                             <i class="lit-ball-img ball-img0"></i>
+                                            <i class="lit-ball-num">41</i>
+                                        </span>
+                                        <span class="lit-ball lit-ball1">
+                                             <i class="lit-ball-img ball-img1"></i>
+                                            <i class="lit-ball-num">41</i>
+                                        </span>
+                                        <span class="lit-ball lit-ball2">
+                                             <i class="lit-ball-img ball-img2"></i>
+                                            <i class="lit-ball-num">41</i>
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="data-header">
+                        <h3 class="data-top2">替补上场</h3>
+                        <div class="data-top-line line-up">
+                            <em class="mid-line">1</em>
+                            <em class="out-line">1</em>
+                        </div>
+                    </div>
+                    <div class="data-con clearfix">
+                        <div class="left">
+                            <div class="data-member">
+                                <div class="data-hd">
+                            <span class="member-pic">
+                                <img src="images/pic1.jpg" alt=""/>
+                                <em class="member-num">46</em>
+
+                            </span>
+                                    <span class="member-status bg-green">守门员</span>
+
+                                </div>
+                                <div class="data-bd have-ball">
+                                    <span class="member-name">王凯力</span>
+                                    <div class="have-ball-num">
+                                        <span class="lit-ball">
+                                             <i class="lit-ball-img ball-img0"></i>
+                                            <i class="lit-ball-num">41</i>
+                                        </span>
+                                        <span class="lit-ball lit-ball1">
+                                             <i class="lit-ball-img ball-img1"></i>
+                                            <i class="lit-ball-num">41</i>
+                                        </span>
+                                        <span class="lit-ball lit-ball2">
+                                             <i class="lit-ball-img ball-img2"></i>
+                                            <i class="lit-ball-num">41</i>
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data-member">
+                                <div class="data-hd">
+                            <span class="member-pic">
+                                <img src="images/pic1.jpg" alt=""/>
+                                <em class="member-num">46</em>
+
+                            </span>
+                                    <span class="member-status bg-blue">前锋</span>
+
+                                </div>
+                                <div class="data-bd ">
+                                    <span class="member-name">王凯力</span>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="data-member">
+                                <div class="data-hd">
+                            <span class="member-pic">
+                                <img src="images/pic1.jpg" alt=""/>
+                                <em class="member-num">46</em>
+                            </span>
+                                    <span class="member-status bg-green">守门员</span>
+
+                                </div>
+                                <div class="data-bd have-ball"><!--have-ball没有数据也有高度-->
+                                    <span class="member-name">王凯力</span>
+                                </div>
+                            </div>
+                            <div class="data-member">
+                                <div class="data-hd">
+                            <span class="member-pic">
+                                <img src="images/pic1.jpg" alt=""/>
+                                <em class="member-num">46</em>
+
+                            </span>
+                                    <span class="member-status bg-blue">前锋</span>
+
+                                </div>
+                                <div class="data-bd ">
+
+                                    <span class="member-name">王凯力</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="cuuju-panel">
+        <div class="cuuju-data-ball">
+            <span class="cuuju-ball-li">
+                  <i class="lit-ball-img ball-img0"></i>
+                    进球
+            </span>
+            <span class="cuuju-ball-li">
+                  <i class="lit-ball-img ball-img1"></i>
+                   点球
+            </span>
+            <span class="cuuju-ball-li">
+                  <i class="lit-ball-img ball-img2"></i>
+                   点球未进
+            </span>
+            <span class="cuuju-ball-li">
+                  <i class="lit-ball-img ball-img3"></i>
+                   乌龙球
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="data-foot">
+        <p class="foot-p">数据来源于蹴鞠足球数据采集</p>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>

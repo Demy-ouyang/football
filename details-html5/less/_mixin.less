@@ -1,0 +1,113 @@
+@charset "utf-8";
+// 任何手机屏幕上字体大小都要统一，所以我们针对不同的分辨率(dpr不同)
+.px2rem(@name, @px){
+    @{name}: @px / 75 * 1rem;
+}
+
+
+// flex布局
+.flex-box(){
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-align(@direction){
+  -webkit-box-align: @direction;
+  -webkit-align-items: @direction;
+  -ms-flex-align: @direction;
+  align-items: @direction;
+}
+.flex-width(@width){
+  -webkit-box-flex: @width;
+  -webkit-flex: @width;
+  -ms-flex: @width;
+  flex: @width;
+}
+//字体溢出
+.word-wrap(){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap:normal;
+  -ms-word-wrap:break-word;
+  word-wrap:break-word;
+  word-break: break-all;
+
+}
+//
+.border-radius(@value:10px){
+  border-radius:@value;
+  -webkit-border-radiu:@value;
+  -moz-border-radiu:@value;
+}
+//
+.background-image(@value){
+  linear-gradient:@value;
+  -webkit-linear-gradient:@value;
+  -o-linear-gradient:@value;
+  -moz-linear-gradient:@value;
+}
+/*border*/
+.border(@width:1px,@color:#eaeaea){
+  position: relative;overflow: hidden;
+  &:before{
+    top: 0;
+    border-top: @width solid @color;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+  }
+  &:after{
+    bottom: 0;
+    border-bottom: @width solid @color;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+  }
+  &:before,&:after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: @width;
+    color: @color;
+  }
+}
+.border-top(@width:1px,@color:#eaeaea){
+  position: relative;overflow: hidden;
+  &:before{
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: @width;
+    border-top: @width solid @color;
+    color: @color;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    left: @padding-lr-width;
+  }
+}
+.border-bottom(@width:1px,@color:#eaeaea){
+  position: relative;overflow: hidden;
+  &:before{
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: @width;
+    border-top: @width solid @color;
+    color: @color;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+  }
+}

@@ -1,0 +1,433 @@
+@charset "utf-8";
+/*border*/
+* {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjzdust: 100%;
+  height: 100%;
+  font-size: 62.5%;
+  /* 10÷16=62.5% */
+}
+body {
+  line-height: 1.6;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  height: 100%;
+  color: #616161;
+}
+html,
+body {
+  font-size: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  border: 0;
+}
+a {
+  text-decoration: none;
+  color: #616161;
+}
+ul {
+  list-style-type: none;
+}
+li {
+  list-style-type: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.img-circle {
+  border-radius: 50%;
+  -webkit-border-radiu: 50%;
+  -moz-border-radiu: 50%;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+/**/
+.wrap {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  background-color: #eeeeee;
+}
+.panel {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.34666667rem;
+}
+.panel:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #eaeaea;
+  color: #eaeaea;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.panel:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.top {
+  display: block;
+  height: 5.33333333rem;
+  margin-left: -0.4rem;
+  margin-right: -0.4rem;
+  margin-bottom: 0.4rem;
+}
+.top img {
+  width: 100%;
+  height: 100%;
+}
+.con-h2 {
+  display: block;
+  font-size: 0.58666667rem;
+  font-weight: bold;
+  color: #111;
+}
+.con-h3 {
+  display: block;
+  font-size: 0.37333333rem;
+  font-weight: normal;
+  color: #8e8e8e;
+}
+.con-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.4rem;
+  margin-top: 0.53333333rem;
+}
+.con-title .per-pic {
+  display: inline-block;
+  width: 1.17333333rem;
+  height: 1.17333333rem;
+  margin-right: 0.10666667rem;
+  padding: 0.08rem;
+}
+.con-title .per-pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-border-radiu: 50%;
+  -moz-border-radiu: 50%;
+}
+.con-title .per-right {
+  display: inline-block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 1.17333333rem;
+}
+.con-title .per-name {
+  display: block;
+  color: #616161;
+  font-size: 0.37333333rem;
+}
+.con-title .per-time {
+  display: block;
+  color: #8e8e8e;
+  font-size: 0.37333333rem;
+}
+.news-p {
+  display: block;
+  font-size: 0.45333333rem;
+  margin-top: 0.26666667rem;
+  color: #494949;
+  line-height: 0.8rem;
+}
+.per-img {
+  display: block;
+  height: 4.88rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  text-align: center;
+}
+.per-img img {
+  height: 100%;
+}
+.per-img-title {
+  display: block;
+  text-align: center;
+  color: #a3a3a3;
+  font-size: 0.37333333rem;
+  padding: 0.13333333rem;
+  margin-bottom: 0.26666667px;
+}
+.per-last {
+  display: block;
+  color: #a3a3a3;
+  font-size: 0.37333333rem;
+  margin-bottom: 0.26666667rem;
+}
+.foot-line1 {
+  padding-bottom: 0.4rem;
+  zoom: 1;
+}
+.foot-line1:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.foot-line1 .line-span1 {
+  display: inline-block;
+  font-size: 0.37333333rem;
+  color: #8e8e8e;
+  margin-right: 0.53333333rem;
+  line-height: 0.37333333rem;
+  float: left;
+}
+.foot-line1 .line-span1 i {
+  display: inline-block;
+  margin-right: 0.16rem;
+  width: 0.45333333rem;
+  height: 0.37333333rem;
+  float: left;
+}
+.icon-tag {
+  display: inline-block;
+  background: url("../images/icon_tag.jpg");
+  background-size: cover;
+}
+.icon-eye {
+  display: inline-block;
+  background: url("../images/icon_eye.jpg");
+  background-size: cover;
+}
+.icon-zan {
+  display: inline-block;
+  background: url("../images/icon_zan.jpg");
+  background-size: cover;
+  vertical-align: top;
+}
+.icon-zan.active {
+  background: url("../images/zan_active.jpg");
+  background-size: cover;
+}
+.icon-replay {
+  display: inline-block;
+  background: url("../images/icon_replay.jpg");
+  background-size: cover;
+}
+.news-resours {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  border-top: 1px dashed #e4e4e4;
+}
+.news-h4 {
+  display: block;
+  color: #343434;
+  font-size: 0.37333333rem;
+  margin-bottom: 0.26666667rem;
+}
+.cicre-con {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.cicre-con .team-img {
+  display: inline-block;
+  width: 1.78666667rem;
+  height: 1.8rem;
+  border-radius: 5px;
+  -webkit-border-radiu: 5px;
+  -moz-border-radiu: 5px;
+  margin-right: 0.4rem;
+}
+.cicre-con .team-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-border-radiu: 5px;
+  -moz-border-radiu: 5px;
+}
+.cicre-con .circle-right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-top: 0.26666667rem;
+}
+.cicre-con .circlr-name {
+  display: block;
+  font-size: 0.37333333rem;
+  color: #242424;
+  margin-bottom: 0.13333333rem;
+}
+.cicre-con .circle-li {
+  display: block;
+  overflow: hidden;
+}
+.cicre-con .line-span2 {
+  font-size: 0.34666667rem;
+  color: #9f9f9f;
+  margin-right: 0.4rem;
+  float: left;
+}
+.cicre-con .line-span2:first-child:after {
+  background-color: #9f9f9f;
+  display: inline-block;
+  content: '';
+  width: 1px;
+  height: 0.32rem;
+  margin-top: 0.08rem;
+  float: right;
+  margin-left: 0.4rem;
+}
+.add-btn {
+  display: inline-block;
+  width: 1.84rem;
+  height: 0.72rem;
+  line-height: 0.72rem;
+  text-align: center;
+  background-color: #33bb47;
+  color: #fff;
+  border-radius: 20px;
+  -webkit-border-radiu: 20px;
+  -moz-border-radiu: 20px;
+  margin-top: 0.46666667rem;
+}
+.recommend {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+.com-team-box {
+  overflow: hidden;
+  height: 5.06666667rem;
+}
+.com-team-box .com-list {
+  height: 100%;
+}
+.com-team-box .com-list .com-li {
+  width: 6.45333333rem;
+  float: left;
+  display: inline-block;
+}
+.com-team-box .team-logo {
+  display: block;
+  width: 6.45333333rem;
+  height: 3.41333333rem;
+}
+.com-team-box .team-logo img {
+  width: 100%;
+  height: 100%;
+}
+.team-h5 {
+  display: block;
+  width: 6.45333333rem;
+  font-size: 0.45333333rem;
+  color: #000;
+  padding-left: 0.13333333rem;
+  padding-top: 0.26666667rem;
+  padding-bottom: 0.13333333rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.discuss-box .news-h4 {
+  border-bottom: 1px dashed #e4e4e4;
+  padding-top: 0.37333333rem;
+  padding-bottom: 0.26666667rem;
+}
+.discuss-list {
+  padding-bottom: 0.26666667rem;
+}
+.discuss-list li {
+  border-bottom: 1px dashed #e4e4e4;
+}
+.discuss-list li.last {
+  border-bottom: none;
+}
+.more-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #33bb47;
+  font-size: 0.42666667rem;
+  padding-top: 0.26666667rem;
+}
+.news-p2 {
+  display: block;
+  font-size: 0.42666667rem;
+  margin-bottom: 0.26666667rem;
+}
+.foot-line2 .line-span1 {
+  float: right;
+}
+.re-replay-box {
+  width: 100%;
+  clear: both;
+  background: #f3f3f5;
+  padding: 0.24rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  border-radius: 5px;
+  -webkit-border-radiu: 5px;
+  -moz-border-radiu: 5px;
+  margin-top: 0.48rem;
+}
+.re-replay-box:before {
+  display: inline-block;
+  content: '';
+  border-color: transparent transparent #f3f3f5 transparent;
+  border-style: solid;
+  border-width: 0  12px 15px 12px;
+  position: absolute;
+  top: -0.30666667rem;
+  right: 0.56rem;
+}
+.re-replay-box .con-title {
+  margin: 0;
+  border-bottom: 1px dashed #dbd9d9;
+  padding: 0.32rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+.re-replay-box .con-title:last-child {
+  border-bottom: none;
+}
+.re-replay-box .con-title .per-name {
+  overflow: hidden;
+  font-size: 0.42666667rem;
+  color: #000;
+}
+.re-replay-box .con-title .per-name .per-time {
+  display: inline-block;
+  float: right;
+  font-style: normal;
+  font-size: 0.37333333rem;
+  color: #9f9f9f;
+}
+.re-replay-box .con-title .per-pcon {
+  display: block;
+  font-size: 0.37333333rem;
+  color: #424242;
+}
