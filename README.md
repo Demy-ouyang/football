@@ -6,19 +6,19 @@
 - 赛事分享
    * [赛前分享](http://demy-ouyang.github.io/football/share-html5/index.html)
    
-   ![赛前分享](http://demy-ouyang.github.io/football/raw/master/code-images/before.png)
+   ![赛前分享](https://github.com/Demy-ouyang/football/raw/master/code-images/before.png)
    
    * [赛中分享](http://demy-ouyang.github.io/football/share-html5/index.html)
    
-   ![赛中分享](http://demy-ouyang.github.io/football/raw/master/code-images/share_index.png)
+   ![赛中分享](https://github.com/Demy-ouyang/football/raw/master/code-images/share_index.png)
    
    * [赛后分享](http://demy-ouyang.github.io/football/share-html5/after.html)
    
-    ![赛后分享](http://demy-ouyang.github.io/football/raw/master/code-images/after.png)
+    ![赛后分享](https://github.com/Demy-ouyang/football/raw/master/code-images/after.png)
 - 战队
    * [战队](http://demy-ouyang.github.io/football/team-html5/index.html)
    
-   ![demo](http://demy-ouyang.github.io/football/raw/master/code-images/team_index_.png)
+   ![demo](https://github.com/Demy-ouyang/football/raw/master/code-images/team_index_.png)
    
 - 个人展示页
     
