@@ -24,7 +24,7 @@
        
      * [新闻详情](http://demy-ouyang.github.io/football/details-html5/index.html)
            
-     ![新闻详情](https://github.com/Demy-ouyang/football/raw/master/code-images/news_detail_.png)  
+     ![新闻详情](https://github.com/Demy-ouyang/football/raw/master/code-images/news_detail.png)  
         
       
 - 个人展示页
